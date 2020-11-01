@@ -10,7 +10,7 @@
         <!--iOS Accessibility Sampler-->
         <scene sceneID="fTs-Bu-YrC">
             <objects>
-                <tableViewController id="X1j-nY-faa" customClass="MainViewController" customModule="iOS_Accessibility_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Topic" id="X1j-nY-faa" customClass="TopicViewController" customModule="iOS_Accessibility_Sampler" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="wjZ-ki-aQp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
