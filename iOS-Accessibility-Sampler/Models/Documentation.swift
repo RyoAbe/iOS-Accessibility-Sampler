@@ -1,7 +1,9 @@
-import UIKit
+import Foundation
+
 struct Documentation {
     static let shared = Documentation()
     private init() {}
+
     static let top = Topic(
         title: "Accessibility for iOS and tvOS",
         sections: [
@@ -36,6 +38,7 @@ struct Documentation {
             Section(title: "Capabilities", pages: [])
         ]
     )
+
     static let uiAccessibility = Topic(
         title: "UIAccessibility",
         sections: [
@@ -62,64 +65,4 @@ struct Documentation {
     static let uiAccessibilityContainer = Topic(title: "UIAccessibilityContainer", sections: [])
     static let uiAccessibilityFocus = Topic(title: "UIAccessibilityFocus", sections: [])
     static let accessibilityTraits = Topic(title: "Accessibility Traits", sections: [])
-}
-
-enum Page {
-    case topic(Topic)
-    case article(title: String, url: String)
-    case api(API)
-}
-
-extension Page {
-    var image: UIImage? {
-        switch self {
-        case .topic:
-            return UIImage(systemName: "doc.plaintext")
-        case .article:
-            return UIImage(systemName: "doc")
-        case .api:
-            return UIImage(systemName: "chevron.left.slash.chevron.right")
-        }
-    }
-
-    var title: String {
-        switch self {
-        case .topic(let topic):
-            return topic.title
-        case .article(let title, _):
-            return title
-        case .api(let api):
-            return api.rawValue
-        }
-    }
-}
-
-struct Topic {
-    let title: String
-    let sections: [Section]
-}
-
-struct Section {
-    let title: String
-    let pages: [Page]
-}
-
-enum Decorator {
-    case `protocol`
-    case `struct`
-    case `var`
-}
-
-enum API: String {
-    case isAccessibilityElement
-    case UIAccessibilityIdentification
-    case UIAccessibilityReadingContent
-    case UIAccessibilityContentSizeCategoryImageAdjusting
-    case UIAccessibilityTextualContext
-    case accessibilityCustomRotors
-    case accessibilityElementsHidden
-    case accessibilityNotifiesWhenDestroyed
-    case accessibilityRespondsToUserInteraction
-    case accessibilityViewIsModal
-    case shouldGroupAccessibilityChildren
 }
