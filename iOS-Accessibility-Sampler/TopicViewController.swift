@@ -46,24 +46,20 @@ extension TopicViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let page = topic.sections[indexPath.section].pages[indexPath.row]
         cell.textLabel?.text = page.title
-        cell.imageView?.image = page.type.image
+        cell.imageView?.image = page.image
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let page = topic.sections[indexPath.section].pages[indexPath.row]
-        switch page.type {
+        switch page {
         case .topic(let topic):
             let vc = TopicViewController.make(with: topic)
             navigationController?.pushViewController(vc, animated: true)
-        case .article(let url):
+        case .article(_, let url):
             let vc = SFSafariViewController(url: URL(string: url)!)
             present(vc, animated: true)
-        case .protocol:
-            break
-        case .struct:
-            break
-        case .var:
+        case .api:
             break
         }
     }

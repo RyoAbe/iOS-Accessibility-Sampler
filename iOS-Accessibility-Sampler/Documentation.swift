@@ -5,91 +5,91 @@ struct Documentation {
     static let top = Topic(
         title: "Accessibility for iOS and tvOS",
         sections: [
-            .init(
+            Section(
                 title: "Essentials",
                 pages: [
-                    .init(title: "UIAccessibility", type: .topic(uiAccessibility)),
-                    .init(title: "UIAccessibilityContainer", type: .protocol),
-                    .init(title: "Supporting VoiceOver in Your App", type: .article(url: "https://developer.apple.com/documentation/uikit/accessibility_for_ios_and_tvos/supporting_voiceover_in_your_app")),
+                    .topic(uiAccessibility),
+                    .topic(uiAccessibilityContainer),
+                    .article(title: "Supporting VoiceOver in Your App", url: "https://developer.apple.com/documentation/uikit/accessibility_for_ios_and_tvos/supporting_voiceover_in_your_app")
                 ]
             ),
-            .init(
+            Section(
                 title: "Behaviors",
                 pages: [
-                    .init(title: "UIAccessibilityFocus", type: .protocol),
-                    .init(title: "UIAccessibilityIdentification", type: .protocol),
-                    .init(title: "UIAccessibilityReadingContent", type: .protocol),
-                    .init(title: "UIAccessibilityContentSizeCategoryImageAdjusting", type: .protocol),
-                    .init(title: "UIAccessibilityTextualContext", type: .protocol),
+                    .topic(uiAccessibilityFocus),
+                    .api(.UIAccessibilityIdentification),
+                    .api(.UIAccessibilityReadingContent),
+                    .api(.UIAccessibilityContentSizeCategoryImageAdjusting),
+                    .api(.UIAccessibilityTextualContext),
                 ]
             ),
-            .init(title: "Behaviors", pages: []),
-            .init(title: "Guided Access", pages: []),
-            .init(title: "Actions", pages: []),
-            .init(title: "Elements", pages: []),
-            .init(title: "Containers", pages: []),
-            .init(title: "Navigation", pages: []),
-            .init(title: "Drag and Drop Support", pages: []),
-            .init(title: "Notifications", pages: []),
-            .init(title: "Conversions", pages: []),
-            .init(title: "Convenience Functions", pages: []),
-            .init(title: "Capabilities", pages: [])
+            Section(title: "Behaviors", pages: []),
+            Section(title: "Guided Access", pages: []),
+            Section(title: "Actions", pages: []),
+            Section(title: "Elements", pages: []),
+            Section(title: "Containers", pages: []),
+            Section(title: "Navigation", pages: []),
+            Section(title: "Drag and Drop Support", pages: []),
+            Section(title: "Notifications", pages: []),
+            Section(title: "Conversions", pages: []),
+            Section(title: "Convenience Functions", pages: []),
+            Section(title: "Capabilities", pages: [])
         ]
     )
-
     static let uiAccessibility = Topic(
         title: "UIAccessibility",
         sections: [
-            .init(
+            Section(
                 title: "Determining Accessibility",
                 pages: [
-                    .init(title: "isAccessibilityElement", type: .var)
+                    .api(.isAccessibilityElement)
                 ]
             ),
-            .init(
+            Section(
                 title: "Configuring Behavior",
                 pages: [
-                    .init(title: "Accessibility Traits", type: .protocol),
-                    .init(title: "var accessibilityTraits: UIAccessibilityTraits", type: .var),
-                    .init(title: "struct UIAccessibilityTraits", type: .var),
-                    .init(title: "var accessibilityCustomRotors: [UIAccessibilityCustomRotor]?", type: .var),
-                    .init(title: "var accessibilityElementsHidden: Bool", type: .var),
-                    .init(title: "var accessibilityNotifiesWhenDestroyed: Bool", type: .var),
-                    .init(title: "var accessibilityRespondsToUserInteraction: Bool", type: .var),
-                    .init(title: "var accessibilityViewIsModal: Bool", type: .var),
-                    .init(title: "var shouldGroupAccessibilityChildren: Bool", type: .var)
+                    .topic(accessibilityTraits),
+                    .api(.accessibilityCustomRotors),
+                    .api(.accessibilityElementsHidden),
+                    .api(.accessibilityNotifiesWhenDestroyed),
+                    .api(.accessibilityRespondsToUserInteraction),
+                    .api(.accessibilityViewIsModal),
+                    .api(.shouldGroupAccessibilityChildren),
                 ]
             ),
         ]
     )
+    static let uiAccessibilityContainer = Topic(title: "UIAccessibilityContainer", sections: [])
+    static let uiAccessibilityFocus = Topic(title: "UIAccessibilityFocus", sections: [])
+    static let accessibilityTraits = Topic(title: "Accessibility Traits", sections: [])
 }
 
-struct Page {
-    let title: String
-    let type: PageType
-}
-
-enum PageType {
+enum Page {
     case topic(Topic)
-    case article(url: String)
-    case `protocol`
-    case `struct`
-    case `var`
+    case article(title: String, url: String)
+    case api(API)
 }
 
-extension PageType {
+extension Page {
     var image: UIImage? {
         switch self {
         case .topic:
             return UIImage(systemName: "doc.plaintext")
         case .article:
             return UIImage(systemName: "doc")
-        case .protocol:
+        case .api:
             return UIImage(systemName: "chevron.left.slash.chevron.right")
-        case .struct:
-            return UIImage(systemName: "chevron.left.slash.chevron.right")
-        case .var:
-            return UIImage(systemName: "chevron.left.slash.chevron.right")
+        }
+    }
+
+    var title: String {
+        switch self {
+        case .topic(let topic):
+            return topic.title
+        case .article(let title, _):
+            return title
+        case .api(let api):
+            return api.rawValue
         }
     }
 }
@@ -104,3 +104,22 @@ struct Section {
     let pages: [Page]
 }
 
+enum Decorator {
+    case `protocol`
+    case `struct`
+    case `var`
+}
+
+enum API: String {
+    case isAccessibilityElement
+    case UIAccessibilityIdentification
+    case UIAccessibilityReadingContent
+    case UIAccessibilityContentSizeCategoryImageAdjusting
+    case UIAccessibilityTextualContext
+    case accessibilityCustomRotors
+    case accessibilityElementsHidden
+    case accessibilityNotifiesWhenDestroyed
+    case accessibilityRespondsToUserInteraction
+    case accessibilityViewIsModal
+    case shouldGroupAccessibilityChildren
+}
