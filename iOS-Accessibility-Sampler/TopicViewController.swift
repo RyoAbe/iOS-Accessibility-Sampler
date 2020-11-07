@@ -59,8 +59,26 @@ extension TopicViewController {
         case .article(_, let url):
             let vc = SFSafariViewController(url: URL(string: url)!)
             present(vc, animated: true)
-        case .api:
-            break
+        case .api(let api):
+            tableView.deselectRow(at: indexPath, animated: true)
+            showSample(with: api)
         }
+    }
+}
+
+private extension TopicViewController {
+    func showSample(with api: API) {
+        switch api {
+        case .isAccessibilityElement:
+            break
+        case .UIAccessibilityIdentification, .UIAccessibilityReadingContent, .UIAccessibilityContentSizeCategoryImageAdjusting, .UIAccessibilityTextualContext, .accessibilityCustomRotors, .accessibilityElementsHidden, .accessibilityNotifiesWhenDestroyed, .accessibilityRespondsToUserInteraction, .accessibilityViewIsModal, .shouldGroupAccessibilityChildren:
+            showUnimplementedAlert()
+        }
+    }
+
+    func showUnimplementedAlert() {
+        let alert = UIAlertController(title: "Unimplemented", message: nil, preferredStyle: .alert)
+        alert.addAction(.init(title: "cancel", style: .cancel))
+        present(alert, animated: true)
     }
 }
