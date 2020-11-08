@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D098BEE25579549007D2F7F /* IsAccessibilityElement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D098BED25579549007D2F7F /* IsAccessibilityElement.storyboard */; };
 		1D72CB76254EDB8B0049F128 /* Documentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72CB75254EDB8B0049F128 /* Documentation.swift */; };
 		1DA963ED253C641600A4B788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA963EC253C641600A4B788 /* AppDelegate.swift */; };
 		1DA963EF253C641600A4B788 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA963EE253C641600A4B788 /* SceneDelegate.swift */; };
@@ -15,7 +16,6 @@
 		1DA963F6253C641800A4B788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA963F5253C641800A4B788 /* Assets.xcassets */; };
 		1DA963F9253C641800A4B788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA963F7253C641800A4B788 /* LaunchScreen.storyboard */; };
 		1DB7B223255665A700E46FE9 /* IsAccessibilityElementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7B221255665A700E46FE9 /* IsAccessibilityElementViewController.swift */; };
-		1DB7B224255665A700E46FE9 /* IsAccessibilityElementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DB7B222255665A700E46FE9 /* IsAccessibilityElementViewController.xib */; };
 		1DB7B234255667B500E46FE9 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7B233255667B500E46FE9 /* Section.swift */; };
 		1DB7B236255667B700E46FE9 /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7B235255667B700E46FE9 /* Decorator.swift */; };
 		1DB7B239255667B900E46FE9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7B238255667B900E46FE9 /* API.swift */; };
@@ -24,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D098BED25579549007D2F7F /* IsAccessibilityElement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IsAccessibilityElement.storyboard; sourceTree = "<group>"; };
 		1D72CB75254EDB8B0049F128 /* Documentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documentation.swift; sourceTree = "<group>"; };
 		1DA963E9253C641600A4B788 /* iOS-Accessibility-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Accessibility-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA963EC253C641600A4B788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		1DA963F8253C641800A4B788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DA963FA253C641800A4B788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DB7B221255665A700E46FE9 /* IsAccessibilityElementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsAccessibilityElementViewController.swift; sourceTree = "<group>"; };
-		1DB7B222255665A700E46FE9 /* IsAccessibilityElementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IsAccessibilityElementViewController.xib; sourceTree = "<group>"; };
 		1DB7B233255667B500E46FE9 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		1DB7B235255667B700E46FE9 /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
 		1DB7B238255667B900E46FE9 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -94,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				1DA963F7253C641800A4B788 /* LaunchScreen.storyboard */,
-				1DA963F2253C641600A4B788 /* Main.storyboard */,
 				1DA963F5253C641800A4B788 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -104,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				1DA963F0253C641600A4B788 /* TopicViewController.swift */,
+				1DA963F2253C641600A4B788 /* Main.storyboard */,
 				1DB7B22A2556672B00E46FE9 /* Samples */,
 			);
 			path = Views;
@@ -125,8 +125,8 @@
 		1DB7B22A2556672B00E46FE9 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
-				1DB7B222255665A700E46FE9 /* IsAccessibilityElementViewController.xib */,
 				1DB7B221255665A700E46FE9 /* IsAccessibilityElementViewController.swift */,
+				1D098BED25579549007D2F7F /* IsAccessibilityElement.storyboard */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 			files = (
 				1DA963F9253C641800A4B788 /* LaunchScreen.storyboard in Resources */,
 				1DA963F6253C641800A4B788 /* Assets.xcassets in Resources */,
-				1DB7B224255665A700E46FE9 /* IsAccessibilityElementViewController.xib in Resources */,
+				1D098BEE25579549007D2F7F /* IsAccessibilityElement.storyboard in Resources */,
 				1DA963F4253C641600A4B788 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

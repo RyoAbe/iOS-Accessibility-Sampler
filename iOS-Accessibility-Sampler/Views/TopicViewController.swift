@@ -70,7 +70,8 @@ private extension TopicViewController {
     func showSample(with api: API) {
         switch api {
         case .isAccessibilityElement:
-            break
+            let vc = IsAccessibilityElementViewController.make(with: api)
+            navigationController?.pushViewController(vc, animated: true)
         case .UIAccessibilityIdentification, .UIAccessibilityReadingContent, .UIAccessibilityContentSizeCategoryImageAdjusting, .UIAccessibilityTextualContext, .accessibilityCustomRotors, .accessibilityElementsHidden, .accessibilityNotifiesWhenDestroyed, .accessibilityRespondsToUserInteraction, .accessibilityViewIsModal, .shouldGroupAccessibilityChildren:
             showUnimplementedAlert()
         }
