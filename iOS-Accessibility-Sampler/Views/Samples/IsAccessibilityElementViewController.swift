@@ -8,17 +8,16 @@
 import UIKit
 
 class IsAccessibilityElementViewController: UITableViewController {
-    private var api: API
-
+    @IBOutlet private weak var cell3: UITableViewCell!
     static func make(with api: API) -> IsAccessibilityElementViewController {
         let sb = UIStoryboard(name: "IsAccessibilityElement", bundle: nil)
         let vc = sb.instantiateInitialViewController() as! IsAccessibilityElementViewController
-        vc.api = api
         vc.title = api.rawValue
         return vc
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        cell3.isAccessibilityElement = false
     }
 }
