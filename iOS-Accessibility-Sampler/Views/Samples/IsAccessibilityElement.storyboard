@@ -16,23 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="we2-yw-6V4">
-                                <rect key="frame" x="30" y="94" width="354" height="219"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="we2-yw-6V4">
+                                <rect key="frame" x="30" y="94" width="354" height="229"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sAQ-zK-V2y">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="97"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="99.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LWd-mL-0tK">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1-1. label.isAccessibilityElement=true" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gJ-QC-P6n">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙆‍♂️label.isAccessibilityElement=true" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gJ-QC-P6n">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="19.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="フォーカスが当たる⬇️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cI8-LX-ycK">
-                                                        <rect key="frame" x="0.0" y="17" width="354" height="14.5"/>
+                                                        <rect key="frame" x="0.0" y="19.5" width="354" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eba-LT-akM">
-                                                <rect key="frame" x="0.0" y="39.5" width="354" height="57.5"/>
+                                                <rect key="frame" x="0.0" y="42" width="354" height="57.5"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
@@ -49,18 +49,18 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="76l-D5-l76">
-                                        <rect key="frame" x="0.0" y="122" width="354" height="97"/>
+                                        <rect key="frame" x="0.0" y="129.5" width="354" height="99.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3xA-6x-TQV">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1-2. label.isAccessibilityElement=false" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yk-Y9-A51">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙅‍♂️label.isAccessibilityElement=false" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yk-Y9-A51">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="19.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="フォーカスが当たらない⬇️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjZ-jQ-wqH">
-                                                        <rect key="frame" x="0.0" y="17" width="354" height="14.5"/>
+                                                        <rect key="frame" x="0.0" y="19.5" width="354" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -68,7 +68,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。こんにちわ。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdm-7r-hdT">
-                                                <rect key="frame" x="0.0" y="39.5" width="354" height="57.5"/>
+                                                <rect key="frame" x="0.0" y="42" width="354" height="57.5"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <bool key="isElement" value="NO"/>
