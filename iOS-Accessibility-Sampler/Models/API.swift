@@ -12,4 +12,6 @@ enum API: String {
     case accessibilityRespondsToUserInteraction
     case accessibilityViewIsModal
     case shouldGroupAccessibilityChildren
+    case UIAccessibilityTraits
+    
 }

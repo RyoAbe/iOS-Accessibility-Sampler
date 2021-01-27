@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D098BEE25579549007D2F7F /* IsAccessibilityElement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D098BED25579549007D2F7F /* IsAccessibilityElement.storyboard */; };
+		1D098BEE25579549007D2F7F /* Sample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D098BED25579549007D2F7F /* Sample.storyboard */; };
 		1D72CB76254EDB8B0049F128 /* Documentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72CB75254EDB8B0049F128 /* Documentation.swift */; };
 		1DA963ED253C641600A4B788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA963EC253C641600A4B788 /* AppDelegate.swift */; };
 		1DA963EF253C641600A4B788 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA963EE253C641600A4B788 /* SceneDelegate.swift */; };
@@ -15,16 +15,17 @@
 		1DA963F4253C641600A4B788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA963F2253C641600A4B788 /* Main.storyboard */; };
 		1DA963F6253C641800A4B788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA963F5253C641800A4B788 /* Assets.xcassets */; };
 		1DA963F9253C641800A4B788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA963F7253C641800A4B788 /* LaunchScreen.storyboard */; };
-		1DB7B223255665A700E46FE9 /* IsAccessibilityElementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7B221255665A700E46FE9 /* IsAccessibilityElementViewController.swift */; };
 		1DB7B234255667B500E46FE9 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7B233255667B500E46FE9 /* Section.swift */; };
 		1DB7B236255667B700E46FE9 /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7B235255667B700E46FE9 /* Decorator.swift */; };
 		1DB7B239255667B900E46FE9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7B238255667B900E46FE9 /* API.swift */; };
 		1DB7B23F2556682800E46FE9 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7B23E2556682800E46FE9 /* Topic.swift */; };
 		1DB7B2422556682900E46FE9 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7B2412556682900E46FE9 /* Page.swift */; };
+		1DBCA4E225BD59E500C05AEA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCA4E125BD59E500C05AEA /* Extensions.swift */; };
+		1DDB5ABB25C0602F000FDFAA /* UIAccessibilityTraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB5ABA25C0602F000FDFAA /* UIAccessibilityTraitsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D098BED25579549007D2F7F /* IsAccessibilityElement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IsAccessibilityElement.storyboard; sourceTree = "<group>"; };
+		1D098BED25579549007D2F7F /* Sample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sample.storyboard; sourceTree = "<group>"; };
 		1D72CB75254EDB8B0049F128 /* Documentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documentation.swift; sourceTree = "<group>"; };
 		1DA963E9253C641600A4B788 /* iOS-Accessibility-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Accessibility-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA963EC253C641600A4B788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,12 +35,13 @@
 		1DA963F5253C641800A4B788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DA963F8253C641800A4B788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DA963FA253C641800A4B788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1DB7B221255665A700E46FE9 /* IsAccessibilityElementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsAccessibilityElementViewController.swift; sourceTree = "<group>"; };
 		1DB7B233255667B500E46FE9 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		1DB7B235255667B700E46FE9 /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
 		1DB7B238255667B900E46FE9 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		1DB7B23E2556682800E46FE9 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		1DB7B2412556682900E46FE9 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		1DBCA4E125BD59E500C05AEA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1DDB5ABA25C0602F000FDFAA /* UIAccessibilityTraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAccessibilityTraitsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				1DB7B226255665C800E46FE9 /* App */,
 				1DB7B227255665E700E46FE9 /* Resources */,
 				1DB7B228255666F000E46FE9 /* Views */,
+				1DBCA4E025BD59BD00C05AEA /* Extensions */,
 				1DB7B2292556671B00E46FE9 /* Models */,
 				1DA963FA253C641800A4B788 /* Info.plist */,
 			);
@@ -125,10 +128,18 @@
 		1DB7B22A2556672B00E46FE9 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
-				1DB7B221255665A700E46FE9 /* IsAccessibilityElementViewController.swift */,
-				1D098BED25579549007D2F7F /* IsAccessibilityElement.storyboard */,
+				1D098BED25579549007D2F7F /* Sample.storyboard */,
+				1DDB5ABA25C0602F000FDFAA /* UIAccessibilityTraitsViewController.swift */,
 			);
 			path = Samples;
+			sourceTree = "<group>";
+		};
+		1DBCA4E025BD59BD00C05AEA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1DBCA4E125BD59E500C05AEA /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +201,7 @@
 			files = (
 				1DA963F9253C641800A4B788 /* LaunchScreen.storyboard in Resources */,
 				1DA963F6253C641800A4B788 /* Assets.xcassets in Resources */,
-				1D098BEE25579549007D2F7F /* IsAccessibilityElement.storyboard in Resources */,
+				1D098BEE25579549007D2F7F /* Sample.storyboard in Resources */,
 				1DA963F4253C641600A4B788 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DB7B23F2556682800E46FE9 /* Topic.swift in Sources */,
-				1DB7B223255665A700E46FE9 /* IsAccessibilityElementViewController.swift in Sources */,
+				1DBCA4E225BD59E500C05AEA /* Extensions.swift in Sources */,
 				1D72CB76254EDB8B0049F128 /* Documentation.swift in Sources */,
 				1DA963F1253C641600A4B788 /* TopicViewController.swift in Sources */,
 				1DA963ED253C641600A4B788 /* AppDelegate.swift in Sources */,
@@ -211,6 +222,7 @@
 				1DB7B234255667B500E46FE9 /* Section.swift in Sources */,
 				1DB7B236255667B700E46FE9 /* Decorator.swift in Sources */,
 				1DB7B239255667B900E46FE9 /* API.swift in Sources */,
+				1DDB5ABB25C0602F000FDFAA /* UIAccessibilityTraitsViewController.swift in Sources */,
 				1DA963EF253C641600A4B788 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

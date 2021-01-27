@@ -51,7 +51,7 @@ struct Documentation {
             Section(
                 title: "Configuring Behavior",
                 pages: [
-                    .topic(accessibilityTraits),
+                    .api(.UIAccessibilityTraits),
                     .api(.accessibilityCustomRotors),
                     .api(.accessibilityElementsHidden),
                     .api(.accessibilityNotifiesWhenDestroyed),
@@ -64,5 +64,4 @@ struct Documentation {
     )
     static let uiAccessibilityContainer = Topic(title: "UIAccessibilityContainer", sections: [])
     static let uiAccessibilityFocus = Topic(title: "UIAccessibilityFocus", sections: [])
-    static let accessibilityTraits = Topic(title: "Accessibility Traits", sections: [])
 }
