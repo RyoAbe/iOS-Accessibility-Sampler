@@ -73,7 +73,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn on VoiceOver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yB-nZ-bGa">
                                 <rect key="frame" x="30" y="797.5" width="104.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Boolean value indicating whether the receiver is an accessibility element that an assistive application can access." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOb-cG-fPW">
@@ -186,6 +186,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MiJ-tm-n2m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1410.144927536232" y="-4.0178571428571423"/>
+        </scene>
+        <!--Accessibility Custom Rotor View Controller-->
+        <scene sceneID="Lvg-29-jm8">
+            <objects>
+                <viewController storyboardIdentifier="UIAccessibilityCustomRotor" id="dN4-zG-l9q" customClass="UIAccessibilityCustomRotorViewController" customModule="iOS_Accessibility_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hAQ-p8-7ti">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rht-sI-meo">
+                                <rect key="frame" x="174" y="388.5" width="66" height="119.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fO0-14-Bui">
+                                <rect key="frame" x="30" y="799" width="354" height="43"/>
+                                <string key="text">Turn on VoiceOver. Focus on the number labels. Next, turn the rotor to match "Counter" and swipe up or down to move the counter.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A context-sensitive function that helps Voice Over users find the next instance of a related element." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTu-oL-Nxp">
+                                <rect key="frame" x="30" y="60" width="354" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GXf-TB-bcD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GXf-TB-bcD" firstAttribute="trailing" secondItem="BTu-oL-Nxp" secondAttribute="trailing" constant="30" id="2F8-CA-vZT"/>
+                            <constraint firstItem="BTu-oL-Nxp" firstAttribute="top" secondItem="GXf-TB-bcD" secondAttribute="top" constant="16" id="5df-DR-k49"/>
+                            <constraint firstItem="fO0-14-Bui" firstAttribute="leading" secondItem="BTu-oL-Nxp" secondAttribute="leading" id="CBu-7D-e4a"/>
+                            <constraint firstItem="fO0-14-Bui" firstAttribute="trailing" secondItem="BTu-oL-Nxp" secondAttribute="trailing" id="JWV-Rk-32n"/>
+                            <constraint firstItem="Rht-sI-meo" firstAttribute="centerX" secondItem="hAQ-p8-7ti" secondAttribute="centerX" id="NWp-Jn-wsq"/>
+                            <constraint firstItem="Rht-sI-meo" firstAttribute="centerY" secondItem="hAQ-p8-7ti" secondAttribute="centerY" id="k1b-uh-Qpm"/>
+                            <constraint firstItem="BTu-oL-Nxp" firstAttribute="leading" secondItem="GXf-TB-bcD" secondAttribute="leading" constant="30" id="vnW-Do-e78"/>
+                            <constraint firstItem="GXf-TB-bcD" firstAttribute="bottom" secondItem="fO0-14-Bui" secondAttribute="bottom" constant="20" id="xjY-uP-Afc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="Rht-sI-meo" id="CmJ-kT-Bzs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Brs-zh-UJ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2195.6521739130435" y="-12.053571428571429"/>
         </scene>
     </scenes>
     <resources>

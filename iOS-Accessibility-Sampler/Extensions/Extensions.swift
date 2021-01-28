@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIViewController {
-    static func makeVC(with api: API) -> UIViewController {
+    static func make(with api: API) -> UIViewController {
         let sb = UIStoryboard(name: "Sample", bundle: nil)
         let vc = sb.instantiateViewController(identifier: api.rawValue)
         vc.title = api.rawValue

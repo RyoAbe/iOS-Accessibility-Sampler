@@ -6,7 +6,7 @@ enum API: String {
     case UIAccessibilityReadingContent
     case UIAccessibilityContentSizeCategoryImageAdjusting
     case UIAccessibilityTextualContext
-    case accessibilityCustomRotors
+    case UIAccessibilityCustomRotor
     case accessibilityElementsHidden
     case accessibilityNotifiesWhenDestroyed
     case accessibilityRespondsToUserInteraction

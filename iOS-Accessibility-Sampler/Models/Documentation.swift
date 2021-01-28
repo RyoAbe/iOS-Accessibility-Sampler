@@ -52,7 +52,7 @@ struct Documentation {
                 title: "Configuring Behavior",
                 pages: [
                     .api(.UIAccessibilityTraits),
-                    .api(.accessibilityCustomRotors),
+                    .api(.UIAccessibilityCustomRotor),
                     .api(.accessibilityElementsHidden),
                     .api(.accessibilityNotifiesWhenDestroyed),
                     .api(.accessibilityRespondsToUserInteraction),

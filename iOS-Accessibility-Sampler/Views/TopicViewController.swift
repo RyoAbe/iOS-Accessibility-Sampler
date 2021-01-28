@@ -70,12 +70,15 @@ private extension TopicViewController {
     func showSample(with api: API) {
         switch api {
         case .isAccessibilityElement:
-            let vc = UIViewController.makeVC(with: api)
+            let vc = UIViewController.make(with: api)
             navigationController?.pushViewController(vc, animated: true)
         case .UIAccessibilityTraits:
             let vc = UITableViewController.makeTableVC(with: api)
             navigationController?.pushViewController(vc, animated: true)
-        case .UIAccessibilityIdentification, .UIAccessibilityReadingContent, .UIAccessibilityContentSizeCategoryImageAdjusting, .UIAccessibilityTextualContext, .accessibilityCustomRotors, .accessibilityElementsHidden, .accessibilityNotifiesWhenDestroyed, .accessibilityRespondsToUserInteraction, .accessibilityViewIsModal, .shouldGroupAccessibilityChildren:
+        case .UIAccessibilityCustomRotor:
+            let vc = UIViewController.make(with: api)
+            navigationController?.pushViewController(vc, animated: true)
+        case .UIAccessibilityIdentification, .UIAccessibilityReadingContent, .UIAccessibilityContentSizeCategoryImageAdjusting, .UIAccessibilityTextualContext, .accessibilityElementsHidden, .accessibilityNotifiesWhenDestroyed, .accessibilityRespondsToUserInteraction, .accessibilityViewIsModal, .shouldGroupAccessibilityChildren:
             showUnimplementedAlert()
         }
     }
