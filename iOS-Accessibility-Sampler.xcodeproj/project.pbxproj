@@ -23,6 +23,7 @@
 		1DB7B2422556682900E46FE9 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7B2412556682900E46FE9 /* Page.swift */; };
 		1DBCA4E225BD59E500C05AEA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCA4E125BD59E500C05AEA /* Extensions.swift */; };
 		1DDB5ABB25C0602F000FDFAA /* UIAccessibilityTraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB5ABA25C0602F000FDFAA /* UIAccessibilityTraitsViewController.swift */; };
+		1DE3DE8825C44881007560B3 /* AccessibilityElementsHiddenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3DE8725C44881007560B3 /* AccessibilityElementsHiddenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		1DB7B2412556682900E46FE9 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		1DBCA4E125BD59E500C05AEA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1DDB5ABA25C0602F000FDFAA /* UIAccessibilityTraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAccessibilityTraitsViewController.swift; sourceTree = "<group>"; };
+		1DE3DE8725C44881007560B3 /* AccessibilityElementsHiddenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityElementsHiddenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				1D098BED25579549007D2F7F /* Sample.storyboard */,
 				1DDB5ABA25C0602F000FDFAA /* UIAccessibilityTraitsViewController.swift */,
 				1D89968E25C30340009E22C0 /* UIAccessibilityCustomRotorViewController.swift */,
+				1DE3DE8725C44881007560B3 /* AccessibilityElementsHiddenViewController.swift */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				1DB7B234255667B500E46FE9 /* Section.swift in Sources */,
 				1D89968F25C30340009E22C0 /* UIAccessibilityCustomRotorViewController.swift in Sources */,
 				1DB7B236255667B700E46FE9 /* Decorator.swift in Sources */,
+				1DE3DE8825C44881007560B3 /* AccessibilityElementsHiddenViewController.swift in Sources */,
 				1DB7B239255667B900E46FE9 /* API.swift in Sources */,
 				1DDB5ABB25C0602F000FDFAA /* UIAccessibilityTraitsViewController.swift in Sources */,
 				1DA963EF253C641600A4B788 /* SceneDelegate.swift in Sources */,

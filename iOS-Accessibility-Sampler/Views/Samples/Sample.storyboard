@@ -49,9 +49,6 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙅‍♂️label.isAccessibilityElement=false" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yk-Y9-A51">
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="19.5"/>
-                                                        <accessibility key="accessibilityConfiguration">
-                                                            <bool key="isElement" value="NO"/>
-                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -104,6 +101,98 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5FH-W9-ilh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="656.52173913043487" y="-4.0178571428571423"/>
+        </scene>
+        <!--Accessibility Elements Hidden View Controller-->
+        <scene sceneID="sD1-3T-rAM">
+            <objects>
+                <viewController storyboardIdentifier="accessibilityElementsHidden" id="nZr-yV-nih" customClass="AccessibilityElementsHiddenViewController" customModule="iOS_Accessibility_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yvC-u8-zI7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vm1-9s-pIt">
+                                <rect key="frame" x="30" y="130" width="354" height="98"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TI5-M0-YFp">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7gd-n0-4eY">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙆‍♂️accessibilityElementsHidden=false" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-X8-xUK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="19.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label can be focused." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZZ-YF-dHy">
+                                                        <rect key="frame" x="0.0" y="19.5" width="354" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tlr-LO-fGP">
+                                        <rect key="frame" x="0.0" y="64" width="354" height="34"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HGh-47-YtD">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙅‍♂️accessibilityElementsHidden=true" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ge9-Kv-7UI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="19.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label cannot be focused." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yko-jq-KjJ">
+                                                        <rect key="frame" x="0.0" y="19.5" width="354" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Boolean value indicating whether the accessibility elements contained within this accessibility element are hidden." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYc-Kb-tkJ">
+                                <rect key="frame" x="30" y="783" width="354" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn on VoiceOver. Try to focus on the elements below." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of8-aO-mqg">
+                                <rect key="frame" x="30" y="64" width="354" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eDz-m1-uuK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Of8-aO-mqg" firstAttribute="top" secondItem="eDz-m1-uuK" secondAttribute="top" constant="20" id="54a-v8-9fO"/>
+                            <constraint firstItem="vm1-9s-pIt" firstAttribute="leading" secondItem="Of8-aO-mqg" secondAttribute="leading" id="5cO-i0-J9L"/>
+                            <constraint firstItem="lYc-Kb-tkJ" firstAttribute="leading" secondItem="vm1-9s-pIt" secondAttribute="leading" id="9ib-dm-mBL"/>
+                            <constraint firstItem="vm1-9s-pIt" firstAttribute="leading" secondItem="yvC-u8-zI7" secondAttribute="leading" constant="30" id="BaG-g4-p5d"/>
+                            <constraint firstAttribute="trailing" secondItem="lYc-Kb-tkJ" secondAttribute="trailing" constant="30" id="Mnb-JX-1OC"/>
+                            <constraint firstItem="vm1-9s-pIt" firstAttribute="trailing" secondItem="Of8-aO-mqg" secondAttribute="trailing" id="XBD-ZI-ZGO"/>
+                            <constraint firstAttribute="trailing" secondItem="vm1-9s-pIt" secondAttribute="trailing" constant="30" id="ZE1-WB-YrI"/>
+                            <constraint firstItem="vm1-9s-pIt" firstAttribute="centerX" secondItem="yvC-u8-zI7" secondAttribute="centerX" id="gD1-et-Z4J"/>
+                            <constraint firstItem="vm1-9s-pIt" firstAttribute="top" secondItem="Of8-aO-mqg" secondAttribute="bottom" constant="50" id="rEw-56-D7V"/>
+                            <constraint firstItem="eDz-m1-uuK" firstAttribute="bottom" secondItem="lYc-Kb-tkJ" secondAttribute="bottom" constant="50" id="ygs-3b-jjf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hiddenStackView" destination="Tlr-LO-fGP" id="ldt-Gn-xEu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D0w-fc-QkJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2935" y="-12"/>
         </scene>
         <!--Accessibility Traits View Controller-->
         <scene sceneID="a8f-8K-ZH7">

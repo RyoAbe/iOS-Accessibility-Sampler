@@ -78,7 +78,10 @@ private extension TopicViewController {
         case .UIAccessibilityCustomRotor:
             let vc = UIViewController.make(with: api)
             navigationController?.pushViewController(vc, animated: true)
-        case .UIAccessibilityIdentification, .UIAccessibilityReadingContent, .UIAccessibilityContentSizeCategoryImageAdjusting, .UIAccessibilityTextualContext, .accessibilityElementsHidden, .accessibilityNotifiesWhenDestroyed, .accessibilityRespondsToUserInteraction, .accessibilityViewIsModal, .shouldGroupAccessibilityChildren:
+        case .accessibilityElementsHidden:
+            let vc = UIViewController.make(with: api)
+            navigationController?.pushViewController(vc, animated: true)
+        case .UIAccessibilityIdentification, .UIAccessibilityReadingContent, .UIAccessibilityContentSizeCategoryImageAdjusting, .UIAccessibilityTextualContext, .accessibilityNotifiesWhenDestroyed, .accessibilityRespondsToUserInteraction, .accessibilityViewIsModal, .shouldGroupAccessibilityChildren:
             showUnimplementedAlert()
         }
     }
