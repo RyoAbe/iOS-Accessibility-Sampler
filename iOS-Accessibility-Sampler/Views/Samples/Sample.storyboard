@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="we2-yw-6V4">
-                                <rect key="frame" x="30" y="161" width="354" height="98"/>
+                                <rect key="frame" x="30" y="130" width="354" height="98"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sAQ-zK-V2y">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
@@ -70,14 +70,16 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn on VoiceOver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yB-nZ-bGa">
-                                <rect key="frame" x="30" y="797.5" width="104.5" height="14.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yB-nZ-bGa">
+                                <rect key="frame" x="30" y="769" width="354" height="43"/>
+                                <string key="text">A Boolean value indicating whether the receiver is an accessibility element that an assistive application can access.
+ </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Boolean value indicating whether the receiver is an accessibility element that an assistive application can access." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOb-cG-fPW">
-                                <rect key="frame" x="30" y="64" width="354" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn on VoiceOver. Try to focus on the elements below." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOb-cG-fPW">
+                                <rect key="frame" x="30" y="64" width="354" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -88,6 +90,7 @@
                         <constraints>
                             <constraint firstItem="1EF-9U-8oA" firstAttribute="bottom" secondItem="7yB-nZ-bGa" secondAttribute="bottom" constant="50" id="3Iy-LH-PfP"/>
                             <constraint firstItem="mOb-cG-fPW" firstAttribute="top" secondItem="1EF-9U-8oA" secondAttribute="top" constant="20" id="8hd-UQ-sg7"/>
+                            <constraint firstAttribute="trailing" secondItem="7yB-nZ-bGa" secondAttribute="trailing" constant="30" id="99H-Xl-YyC"/>
                             <constraint firstItem="7yB-nZ-bGa" firstAttribute="leading" secondItem="we2-yw-6V4" secondAttribute="leading" id="Ixe-iS-lca"/>
                             <constraint firstAttribute="trailing" secondItem="we2-yw-6V4" secondAttribute="trailing" constant="30" id="TQt-Jm-OqX"/>
                             <constraint firstItem="we2-yw-6V4" firstAttribute="leading" secondItem="c8p-sU-QxU" secondAttribute="leading" constant="30" id="VPJ-Aa-5hH"/>
@@ -111,11 +114,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Cyg-yy-u1y">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A mask that contains the OR combination of the accessibility traits that best characterize an accessibility element." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQT-wy-sKw">
-                                    <rect key="frame" x="16" y="8" width="382" height="60"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn on VoiceOver. Try to focus on the elements below." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQT-wy-sKw">
+                                    <rect key="frame" x="16" y="8" width="382" height="30"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -129,11 +132,11 @@
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="UgW-aU-YOn">
-                            <rect key="frame" x="0.0" y="198" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="168" width="414" height="55"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn on VoiceOver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FO-MR-2h2">
-                                    <rect key="frame" x="16" y="8" width="104.5" height="28"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A mask that contains the OR combination of the accessibility traits that best characterize an accessibility element." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FO-MR-2h2">
+                                    <rect key="frame" x="16" y="8" width="382" height="39"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" systemColor="systemGrayColor"/>
                                     <nil key="highlightedColor"/>
@@ -143,12 +146,13 @@
                             <constraints>
                                 <constraint firstItem="6FO-MR-2h2" firstAttribute="top" secondItem="UgW-aU-YOn" secondAttribute="topMargin" id="9zD-yv-2PH"/>
                                 <constraint firstAttribute="bottomMargin" secondItem="6FO-MR-2h2" secondAttribute="bottom" id="L5b-nh-bih"/>
+                                <constraint firstAttribute="trailing" secondItem="6FO-MR-2h2" secondAttribute="trailing" constant="16" id="LZN-ma-rnC"/>
                                 <constraint firstItem="6FO-MR-2h2" firstAttribute="leading" secondItem="UgW-aU-YOn" secondAttribute="leadingMargin" constant="8" id="x6A-IH-kXL"/>
                             </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="rNb-tQ-P5b" detailTextLabel="h7U-fU-bGm" style="IBUITableViewCellStyleSubtitle" id="Oqa-1M-flv">
-                                <rect key="frame" x="0.0" y="131.5" width="414" height="48.5"/>
+                                <rect key="frame" x="0.0" y="101.5" width="414" height="48.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oqa-1M-flv" id="qIG-Pu-qrF">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="48.5"/>
@@ -201,15 +205,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fO0-14-Bui">
-                                <rect key="frame" x="30" y="799" width="354" height="43"/>
-                                <string key="text">Turn on VoiceOver. Focus on the number labels. Next, turn the rotor to match "Counter" and swipe up or down to move the counter.</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A context-sensitive function that helps Voice Over users find the next instance of a related element." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fO0-14-Bui">
+                                <rect key="frame" x="30" y="813" width="354" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A context-sensitive function that helps Voice Over users find the next instance of a related element." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTu-oL-Nxp">
-                                <rect key="frame" x="30" y="60" width="354" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTu-oL-Nxp">
+                                <rect key="frame" x="30" y="60" width="354" height="47"/>
+                                <string key="text">Turn on VoiceOver. Focus on the number labels. Next, turn the rotor to match "Counter" and swipe up or down to move the counter.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
