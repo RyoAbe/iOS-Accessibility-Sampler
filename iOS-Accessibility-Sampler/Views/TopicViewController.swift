@@ -47,6 +47,16 @@ extension TopicViewController {
         let page = topic.sections[indexPath.section].pages[indexPath.row]
         cell.textLabel?.text = page.title
         cell.imageView?.image = page.image
+        switch page {
+        case .api(let api):
+            cell.textLabel?.textColor = api.isAvailableOnIOS ? .label : .secondaryLabel
+            cell.imageView?.alpha = api.isAvailableOnIOS ? 1 : 0.5
+            cell.accessibilityTraits = api.isAvailableOnIOS ? [.button] : [.notEnabled]
+        case .article, .topic:
+            cell.textLabel?.textColor = .label
+            cell.imageView?.alpha = 1
+            cell.accessibilityTraits = [.button]
+        }
         return cell
     }
 

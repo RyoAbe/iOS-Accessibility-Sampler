@@ -240,7 +240,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="rNb-tQ-P5b" detailTextLabel="h7U-fU-bGm" style="IBUITableViewCellStyleSubtitle" id="Oqa-1M-flv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="rNb-tQ-P5b" detailTextLabel="h7U-fU-bGm" style="IBUITableViewCellStyleSubtitle" id="Oqa-1M-flv" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="101.5" width="414" height="48.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oqa-1M-flv" id="qIG-Pu-qrF">
@@ -267,6 +267,11 @@
                                     <accessibilityTraits key="traits" adjustable="YES"/>
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minHeight">
+                                        <real key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tableViewCell>
                         </prototypes>
                         <sections/>

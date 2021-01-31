@@ -22,6 +22,7 @@
 		1DB7B23F2556682800E46FE9 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7B23E2556682800E46FE9 /* Topic.swift */; };
 		1DB7B2422556682900E46FE9 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7B2412556682900E46FE9 /* Page.swift */; };
 		1DBCA4E225BD59E500C05AEA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCA4E125BD59E500C05AEA /* Extensions.swift */; };
+		1DCE9F2E25C6DC0600A474C0 /* MinHeightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCE9F2D25C6DC0600A474C0 /* MinHeightCell.swift */; };
 		1DDB5ABB25C0602F000FDFAA /* UIAccessibilityTraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB5ABA25C0602F000FDFAA /* UIAccessibilityTraitsViewController.swift */; };
 		1DE3DE8825C44881007560B3 /* AccessibilityElementsHiddenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3DE8725C44881007560B3 /* AccessibilityElementsHiddenViewController.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		1DB7B23E2556682800E46FE9 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		1DB7B2412556682900E46FE9 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		1DBCA4E125BD59E500C05AEA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1DCE9F2D25C6DC0600A474C0 /* MinHeightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinHeightCell.swift; sourceTree = "<group>"; };
 		1DDB5ABA25C0602F000FDFAA /* UIAccessibilityTraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAccessibilityTraitsViewController.swift; sourceTree = "<group>"; };
 		1DE3DE8725C44881007560B3 /* AccessibilityElementsHiddenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityElementsHiddenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 			children = (
 				1DA963F0253C641600A4B788 /* TopicViewController.swift */,
 				1DA963F2253C641600A4B788 /* Main.storyboard */,
+				1DCE9F2D25C6DC0600A474C0 /* MinHeightCell.swift */,
 				1DB7B22A2556672B00E46FE9 /* Samples */,
 			);
 			path = Views;
@@ -224,6 +227,7 @@
 				1D72CB76254EDB8B0049F128 /* Documentation.swift in Sources */,
 				1DA963F1253C641600A4B788 /* TopicViewController.swift in Sources */,
 				1DA963ED253C641600A4B788 /* AppDelegate.swift in Sources */,
+				1DCE9F2E25C6DC0600A474C0 /* MinHeightCell.swift in Sources */,
 				1DB7B2422556682900E46FE9 /* Page.swift in Sources */,
 				1DB7B234255667B500E46FE9 /* Section.swift in Sources */,
 				1D89968F25C30340009E22C0 /* UIAccessibilityCustomRotorViewController.swift in Sources */,
