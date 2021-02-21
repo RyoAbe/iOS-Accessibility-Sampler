@@ -91,7 +91,10 @@ private extension TopicViewController {
         case .accessibilityElementsHidden:
             let vc = UIViewController.make(with: api)
             navigationController?.pushViewController(vc, animated: true)
-        case .UIAccessibilityIdentification, .UIAccessibilityReadingContent, .UIAccessibilityContentSizeCategoryImageAdjusting, .UIAccessibilityTextualContext, .accessibilityNotifiesWhenDestroyed, .accessibilityRespondsToUserInteraction, .accessibilityViewIsModal, .shouldGroupAccessibilityChildren:
+        case .accessibilityRespondsToUserInteraction:
+            let vc = UIViewController.make(with: api)
+            navigationController?.pushViewController(vc, animated: true)
+        case .UIAccessibilityIdentification, .UIAccessibilityReadingContent, .UIAccessibilityContentSizeCategoryImageAdjusting, .UIAccessibilityTextualContext, .accessibilityNotifiesWhenDestroyed, .accessibilityViewIsModal, .shouldGroupAccessibilityChildren:
             showUnimplementedAlert()
         }
     }
