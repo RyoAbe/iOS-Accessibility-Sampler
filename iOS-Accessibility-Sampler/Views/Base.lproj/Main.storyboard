@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <sections>
-                            <tableViewSection footerTitle="Apple公式ドキュメントのUIAccessibilityの章をなぞって作った各APIの利用方法の紹介したサンプルコード集" id="sbm-YS-cEX">
+                            <tableViewSection footerTitle="Apple公式ドキュメントのUIAccessibilityの章をなぞって作った各APIの利用方法を紹介したサンプルコード集" id="sbm-YS-cEX">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="EHZ-z2-gd3" imageView="kVb-Dz-yQT" style="IBUITableViewCellStyleDefault" id="hnL-ng-gyS">
                                         <rect key="frame" x="20" y="18" width="374" height="43.5"/>
