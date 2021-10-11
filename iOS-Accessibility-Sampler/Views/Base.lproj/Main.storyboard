@@ -537,52 +537,110 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="s97-zj-jbE">
-                                <rect key="frame" x="107" y="383" width="200" height="130"/>
+                                <rect key="frame" x="82" y="223" width="250" height="450"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8h8-oE-TIE">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="130"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="LFg-fy-ZmM"/>
+                                            <constraint firstAttribute="height" constant="130" id="LFg-fy-ZmM"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="ボタン１"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="UIButton" subtitle="フォーカスを当てると、タイトルと「ボタン」が読み上げられる（通常の挙動）">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="tapButton:" destination="j6i-w9-3jr" eventType="touchUpInside" id="Zf6-kf-XZN"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6Z-O7-pu9">
-                                        <rect key="frame" x="0.0" y="80" width="200" height="50"/>
+                                        <rect key="frame" x="0.0" y="160" width="250" height="130"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ボタン２" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGb-MB-ffd">
-                                                <rect key="frame" x="69.5" y="16" width="61.5" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Yqt-Bo-fCD">
+                                                <rect key="frame" x="16" y="18" width="218" height="94"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップ可なView１" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGb-MB-ffd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="218" height="18"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UITapGestureRecognizerを使ってジェスチャーを追加。フォーカスを当ててもタイトルしか読み上げられない。（タップできる要素なのかが分からない）" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BW-SO-wie">
+                                                        <rect key="frame" x="0.0" y="22" width="218" height="72"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="tintColor"/>
                                         <constraints>
-                                            <constraint firstItem="YGb-MB-ffd" firstAttribute="centerY" secondItem="S6Z-O7-pu9" secondAttribute="centerY" id="HE5-Li-vAJ"/>
-                                            <constraint firstItem="YGb-MB-ffd" firstAttribute="centerX" secondItem="S6Z-O7-pu9" secondAttribute="centerX" id="iQU-29-hjG"/>
+                                            <constraint firstItem="Yqt-Bo-fCD" firstAttribute="leading" secondItem="S6Z-O7-pu9" secondAttribute="leading" constant="16" id="Cnn-Q9-mE5"/>
+                                            <constraint firstItem="Yqt-Bo-fCD" firstAttribute="centerY" secondItem="S6Z-O7-pu9" secondAttribute="centerY" id="HZT-1C-W6h"/>
+                                            <constraint firstAttribute="trailing" secondItem="Yqt-Bo-fCD" secondAttribute="trailing" constant="16" id="zgS-6p-0nu"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvo-qU-eA9">
+                                        <rect key="frame" x="0.0" y="320" width="250" height="130"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zTB-9K-9gF">
+                                                <rect key="frame" x="16" y="18" width="218" height="94"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップ可なView２" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cp1-RY-hfk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="218" height="18"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIt-3g-e4E">
+                                                        <rect key="frame" x="0.0" y="22" width="218" height="72"/>
+                                                        <string key="text">View1と同様UITapGestureRecognizerを使ってる。
+読み上げからタップ可能かが分かるよう、自前で accessibilityTraits に .button を追加している。</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="tintColor"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstItem="zTB-9K-9gF" firstAttribute="leading" secondItem="fvo-qU-eA9" secondAttribute="leading" constant="16" id="Fbs-gJ-7kN"/>
+                                            <constraint firstAttribute="trailing" secondItem="zTB-9K-9gF" secondAttribute="trailing" constant="16" id="Y8e-4p-HD1"/>
+                                            <constraint firstItem="zTB-9K-9gF" firstAttribute="centerY" secondItem="fvo-qU-eA9" secondAttribute="centerY" id="rKU-64-KQK"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="fvo-qU-eA9" firstAttribute="height" secondItem="8h8-oE-TIE" secondAttribute="height" id="9ol-SP-QtP"/>
                                     <constraint firstItem="S6Z-O7-pu9" firstAttribute="height" secondItem="8h8-oE-TIE" secondAttribute="height" id="BMF-mu-IaW"/>
-                                    <constraint firstAttribute="width" constant="200" id="jFU-pX-gW6"/>
+                                    <constraint firstAttribute="width" constant="250" id="jFU-pX-gW6"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定 &gt; アクセシビリティ &gt; VoiceOver にてVoiceOverを有効にして、下の要素にフォーカスを当ててみてください。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwH-Mx-b47">
+                                <rect key="frame" x="24" y="104" width="366" height="50.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h16-PG-Trb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="cwH-Mx-b47" firstAttribute="top" secondItem="h16-PG-Trb" secondAttribute="top" constant="16" id="3Lk-mm-N6D"/>
+                            <constraint firstItem="h16-PG-Trb" firstAttribute="trailing" secondItem="cwH-Mx-b47" secondAttribute="trailing" constant="24" id="7x4-ZN-0dn"/>
+                            <constraint firstItem="cwH-Mx-b47" firstAttribute="leading" secondItem="h16-PG-Trb" secondAttribute="leading" constant="24" id="c5O-D6-pMv"/>
                             <constraint firstItem="s97-zj-jbE" firstAttribute="centerY" secondItem="JJM-aY-Ya7" secondAttribute="centerY" id="gPL-Xh-wlP"/>
                             <constraint firstItem="s97-zj-jbE" firstAttribute="centerX" secondItem="JJM-aY-Ya7" secondAttribute="centerX" id="n6s-Mr-Xyf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Q. タップが可能な要素なのに「ボタン」とも「リンク」とも読み上げられない" id="d1G-R3-dXO"/>
                     <connections>
-                        <outlet property="tappableView" destination="S6Z-O7-pu9" id="daP-VM-pvV"/>
+                        <outlet property="tappableView1" destination="S6Z-O7-pu9" id="FvK-Uv-vKB"/>
+                        <outlet property="tappableView2" destination="fvo-qU-eA9" id="yfm-tB-oHR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejm-aH-YGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
