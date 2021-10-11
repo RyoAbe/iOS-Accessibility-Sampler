@@ -65,6 +65,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D97D8722713FD2800B21917 /* CommonProblemSamples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonProblemSamples;
+			sourceTree = "<group>";
+		};
 		1DA963E0253C641600A4B788 = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +125,8 @@
 				1DA963F0253C641600A4B788 /* TopicViewController.swift */,
 				1DA963F2253C641600A4B788 /* Main.storyboard */,
 				1DCE9F2D25C6DC0600A474C0 /* MinHeightCell.swift */,
-				1DB7B22A2556672B00E46FE9 /* Samples */,
+				1DB7B22A2556672B00E46FE9 /* ApiBaseSamples */,
+				1D97D8722713FD2800B21917 /* CommonProblemSamples */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,7 +144,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		1DB7B22A2556672B00E46FE9 /* Samples */ = {
+		1DB7B22A2556672B00E46FE9 /* ApiBaseSamples */ = {
 			isa = PBXGroup;
 			children = (
 				1D098BED25579549007D2F7F /* Sample.storyboard */,
@@ -146,7 +154,7 @@
 				1D041D3525E28C3D0050BF7C /* AccessibilityRespondsToUserInteractionViewController.swift */,
 				1D7426AB25EA394500C0334F /* AccessibilityViewIsModalViewController.swift */,
 			);
-			path = Samples;
+			path = ApiBaseSamples;
 			sourceTree = "<group>";
 		};
 		1DBCA4E025BD59BD00C05AEA /* Extensions */ = {
@@ -391,7 +399,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 73VBXUT85B;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "iOS-Accessibility-Sampler/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -410,7 +418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LX25DEZ4K9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "iOS-Accessibility-Sampler/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
