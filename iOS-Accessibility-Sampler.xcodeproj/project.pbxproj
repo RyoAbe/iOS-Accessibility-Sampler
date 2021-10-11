@@ -12,6 +12,7 @@
 		1D72CB76254EDB8B0049F128 /* Documentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72CB75254EDB8B0049F128 /* Documentation.swift */; };
 		1D7426AC25EA394500C0334F /* AccessibilityViewIsModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7426AB25EA394500C0334F /* AccessibilityViewIsModalViewController.swift */; };
 		1D89968F25C30340009E22C0 /* UIAccessibilityCustomRotorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D89968E25C30340009E22C0 /* UIAccessibilityCustomRotorViewController.swift */; };
+		1D97D8742714054000B21917 /* AccessibilityTraitsButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97D8732714054000B21917 /* AccessibilityTraitsButtonViewController.swift */; };
 		1DA963ED253C641600A4B788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA963EC253C641600A4B788 /* AppDelegate.swift */; };
 		1DA963EF253C641600A4B788 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA963EE253C641600A4B788 /* SceneDelegate.swift */; };
 		1DA963F1253C641600A4B788 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA963F0253C641600A4B788 /* TopicViewController.swift */; };
@@ -35,6 +36,7 @@
 		1D72CB75254EDB8B0049F128 /* Documentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documentation.swift; sourceTree = "<group>"; };
 		1D7426AB25EA394500C0334F /* AccessibilityViewIsModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityViewIsModalViewController.swift; sourceTree = "<group>"; };
 		1D89968E25C30340009E22C0 /* UIAccessibilityCustomRotorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAccessibilityCustomRotorViewController.swift; sourceTree = "<group>"; };
+		1D97D8732714054000B21917 /* AccessibilityTraitsButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityTraitsButtonViewController.swift; sourceTree = "<group>"; };
 		1DA963E9253C641600A4B788 /* iOS-Accessibility-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Accessibility-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA963EC253C641600A4B788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DA963EE253C641600A4B788 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		1D97D8722713FD2800B21917 /* CommonProblemSamples */ = {
 			isa = PBXGroup;
 			children = (
+				1D97D8732714054000B21917 /* AccessibilityTraitsButtonViewController.swift */,
 			);
 			path = CommonProblemSamples;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				1DB7B23F2556682800E46FE9 /* Topic.swift in Sources */,
 				1DBCA4E225BD59E500C05AEA /* Extensions.swift in Sources */,
 				1D7426AC25EA394500C0334F /* AccessibilityViewIsModalViewController.swift in Sources */,
+				1D97D8742714054000B21917 /* AccessibilityTraitsButtonViewController.swift in Sources */,
 				1D72CB76254EDB8B0049F128 /* Documentation.swift in Sources */,
 				1DA963F1253C641600A4B788 /* TopicViewController.swift in Sources */,
 				1DA963ED253C641600A4B788 /* AppDelegate.swift in Sources */,

@@ -531,18 +531,63 @@
         <!--Q. タップが可能な要素なのに「ボタン」とも「リンク」とも読み上げられない-->
         <scene sceneID="gwp-aD-YYA">
             <objects>
-                <viewController id="j6i-w9-3jr" sceneMemberID="viewController">
+                <viewController id="j6i-w9-3jr" customClass="AccessibilityTraitsButtonViewController" customModule="iOS_Accessibility_Sampler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JJM-aY-Ya7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="s97-zj-jbE">
+                                <rect key="frame" x="107" y="383" width="200" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8h8-oE-TIE">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="LFg-fy-ZmM"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="ボタン１"/>
+                                        <connections>
+                                            <action selector="tapButton:" destination="j6i-w9-3jr" eventType="touchUpInside" id="Zf6-kf-XZN"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6Z-O7-pu9">
+                                        <rect key="frame" x="0.0" y="80" width="200" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ボタン２" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGb-MB-ffd">
+                                                <rect key="frame" x="69.5" y="16" width="61.5" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="tintColor"/>
+                                        <constraints>
+                                            <constraint firstItem="YGb-MB-ffd" firstAttribute="centerY" secondItem="S6Z-O7-pu9" secondAttribute="centerY" id="HE5-Li-vAJ"/>
+                                            <constraint firstItem="YGb-MB-ffd" firstAttribute="centerX" secondItem="S6Z-O7-pu9" secondAttribute="centerX" id="iQU-29-hjG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="S6Z-O7-pu9" firstAttribute="height" secondItem="8h8-oE-TIE" secondAttribute="height" id="BMF-mu-IaW"/>
+                                    <constraint firstAttribute="width" constant="200" id="jFU-pX-gW6"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="h16-PG-Trb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s97-zj-jbE" firstAttribute="centerY" secondItem="JJM-aY-Ya7" secondAttribute="centerY" id="gPL-Xh-wlP"/>
+                            <constraint firstItem="s97-zj-jbE" firstAttribute="centerX" secondItem="JJM-aY-Ya7" secondAttribute="centerX" id="n6s-Mr-Xyf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Q. タップが可能な要素なのに「ボタン」とも「リンク」とも読み上げられない" id="d1G-R3-dXO"/>
+                    <connections>
+                        <outlet property="tappableView" destination="S6Z-O7-pu9" id="daP-VM-pvV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejm-aH-YGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2846" y="319"/>
+            <point key="canvasLocation" x="2844.9275362318845" y="318.75"/>
         </scene>
     </scenes>
     <resources>
@@ -553,6 +598,9 @@
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
