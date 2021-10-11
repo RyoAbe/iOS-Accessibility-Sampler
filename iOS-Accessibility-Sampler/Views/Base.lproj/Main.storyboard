@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -153,7 +154,7 @@
                         <sections>
                             <tableViewSection headerTitle="ボタン" id="zTa-eM-SXH">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="rnn-6q-B3o" style="IBUITableViewCellStyleDefault" id="Xog-xt-nLu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="rnn-6q-B3o" style="IBUITableViewCellStyleDefault" id="Xog-xt-nLu" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="49.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xog-xt-nLu" id="6U1-lb-UFl">
@@ -169,8 +170,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="j6i-w9-3jr" kind="show" id="thW-aH-izw"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="wsA-xU-RDw" style="IBUITableViewCellStyleDefault" id="8AD-Ed-a3W">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="wsA-xU-RDw" style="IBUITableViewCellStyleDefault" id="8AD-Ed-a3W" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="93" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8AD-Ed-a3W" id="a6V-3w-4rl">
@@ -187,7 +191,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="vPg-SM-Jo3" style="IBUITableViewCellStyleDefault" id="h7c-2X-xtW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="vPg-SM-Jo3" style="IBUITableViewCellStyleDefault" id="h7c-2X-xtW" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="136.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h7c-2X-xtW" id="uvW-FH-9pL">
@@ -208,7 +212,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="ラベル" id="oQz-Wn-o7E">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="TlE-1r-2fF" style="IBUITableViewCellStyleDefault" id="Al8-kg-Y5i">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="TlE-1r-2fF" style="IBUITableViewCellStyleDefault" id="Al8-kg-Y5i" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="230" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Al8-kg-Y5i" id="Lb4-pt-Zod">
@@ -225,7 +229,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="A5N-Vz-fYf" style="IBUITableViewCellStyleDefault" id="RQo-P5-gVC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="A5N-Vz-fYf" style="IBUITableViewCellStyleDefault" id="RQo-P5-gVC" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="273.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RQo-P5-gVC" id="YYF-8c-Fmm">
@@ -242,7 +246,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="M44-nK-O46" style="IBUITableViewCellStyleDefault" id="fOX-bK-qcg">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="M44-nK-O46" style="IBUITableViewCellStyleDefault" id="fOX-bK-qcg" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="317" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fOX-bK-qcg" id="zrd-6w-40a">
@@ -263,7 +267,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="テキストフィールド" id="Nfr-5v-xKo">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="czv-NC-MDR" style="IBUITableViewCellStyleDefault" id="xkF-aq-OUM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="czv-NC-MDR" style="IBUITableViewCellStyleDefault" id="xkF-aq-OUM" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="410.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xkF-aq-OUM" id="zLZ-Xv-d7r">
@@ -284,7 +288,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="テーブルビュー" id="ick-vh-NaY">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="4Af-li-Df6" style="IBUITableViewCellStyleDefault" id="ehL-rw-M9L">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="4Af-li-Df6" style="IBUITableViewCellStyleDefault" id="ehL-rw-M9L" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="504" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ehL-rw-M9L" id="xgG-zc-ELN">
@@ -301,7 +305,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="98B-sQ-zri" style="IBUITableViewCellStyleDefault" id="PrA-s8-s0B">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="98B-sQ-zri" style="IBUITableViewCellStyleDefault" id="PrA-s8-s0B" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="547.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PrA-s8-s0B" id="vaV-AF-Oxc">
@@ -322,7 +326,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="コレクションビュー" id="53s-py-w5d">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="wl1-0e-Lbd" style="IBUITableViewCellStyleDefault" id="2hA-hv-cE3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="wl1-0e-Lbd" style="IBUITableViewCellStyleDefault" id="2hA-hv-cE3" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="641" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2hA-hv-cE3" id="nK1-Gb-iZu">
@@ -343,7 +347,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="状態" id="NY2-JN-hRu">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="C5H-Xn-pBo" style="IBUITableViewCellStyleDefault" id="mxG-7a-HQo">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="C5H-Xn-pBo" style="IBUITableViewCellStyleDefault" id="mxG-7a-HQo" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="734.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mxG-7a-HQo" id="O6K-Ye-PEh">
@@ -362,7 +366,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="3tq-ay-U4X" style="IBUITableViewCellStyleDefault" id="UoF-YH-Mqs">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="3tq-ay-U4X" style="IBUITableViewCellStyleDefault" id="UoF-YH-Mqs" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="778" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UoF-YH-Mqs" id="ThE-Oy-6WD">
@@ -383,7 +387,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="フォーカス" id="Jvn-2Q-Hv2">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="o3u-Q9-E4l" style="IBUITableViewCellStyleDefault" id="QGW-WN-aQh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="o3u-Q9-E4l" style="IBUITableViewCellStyleDefault" id="QGW-WN-aQh" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="871.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QGW-WN-aQh" id="5TM-zf-K4E">
@@ -400,7 +404,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="mZ8-N1-3hs" style="IBUITableViewCellStyleDefault" id="Q5Y-uL-aOI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="mZ8-N1-3hs" style="IBUITableViewCellStyleDefault" id="Q5Y-uL-aOI" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="915" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q5Y-uL-aOI" id="fe5-Mz-SVI">
@@ -417,7 +421,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="N5z-kU-wyC" style="IBUITableViewCellStyleDefault" id="N6d-HL-Ivx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="N5z-kU-wyC" style="IBUITableViewCellStyleDefault" id="N6d-HL-Ivx" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="958.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N6d-HL-Ivx" id="hHX-QY-r6e">
@@ -434,7 +438,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="3nd-nO-67M" style="IBUITableViewCellStyleDefault" id="KWh-aA-CIl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="3nd-nO-67M" style="IBUITableViewCellStyleDefault" id="KWh-aA-CIl" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="1002" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KWh-aA-CIl" id="gG7-Sh-Yoa">
@@ -451,7 +455,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="5UP-de-RxH" style="IBUITableViewCellStyleDefault" id="n8g-Gu-08u">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="5UP-de-RxH" style="IBUITableViewCellStyleDefault" id="n8g-Gu-08u" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="1045.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n8g-Gu-08u" id="BH1-OB-vMU">
@@ -472,7 +476,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="グラフ" id="ce5-Tl-NaF">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="0xE-xB-EOr" style="IBUITableViewCellStyleDefault" id="KDd-rx-331">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="0xE-xB-EOr" style="IBUITableViewCellStyleDefault" id="KDd-rx-331" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="1139" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KDd-rx-331" id="VF0-lE-DfG">
@@ -493,7 +497,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="全般" id="Xkg-p1-Lsh">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="5bz-AZ-LVy" style="IBUITableViewCellStyleDefault" id="K4l-g5-GcZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="5bz-AZ-LVy" style="IBUITableViewCellStyleDefault" id="K4l-g5-GcZ" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="1232.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K4l-g5-GcZ" id="LrF-jU-8rp">
@@ -524,10 +528,29 @@
             </objects>
             <point key="canvasLocation" x="2016" y="320"/>
         </scene>
+        <!--Q. タップが可能な要素なのに「ボタン」とも「リンク」とも読み上げられない-->
+        <scene sceneID="gwp-aD-YYA">
+            <objects>
+                <viewController id="j6i-w9-3jr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JJM-aY-Ya7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="h16-PG-Trb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Q. タップが可能な要素なのに「ボタン」とも「リンク」とも読み上げられない" id="d1G-R3-dXO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ejm-aH-YGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2846" y="319"/>
+        </scene>
     </scenes>
     <resources>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
