@@ -15,30 +15,22 @@ class AccessibilityTraitsButtonViewController: UIViewController {
         super.viewDidLoad()
 
         let tap1 = UITapGestureRecognizer()
-        tap1.addTarget(self, action: #selector(tapView1))
+        tap1.addTarget(self, action: #selector(tappedButton))
         tappableView1.addGestureRecognizer(tap1)
         tappableView1.toRound()
 
         let tap2 = UITapGestureRecognizer()
-        tap2.addTarget(self, action: #selector(tapView2))
+        tap2.addTarget(self, action: #selector(tappedButton))
         tappableView2.addGestureRecognizer(tap2)
         tappableView2.toRound()
     }
 
     @IBAction func tapButton(_ sender: Any) {
-        let alert = UIAlertController(title: "ボタン１をタップしました", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "閉じる", style: .cancel, handler: nil))
-        present(alert, animated: true)
+        tappedButton()
     }
 
-    @objc func tapView1() {
-        let alert = UIAlertController(title: "View１をタップしました", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "閉じる", style: .cancel, handler: nil))
-        present(alert, animated: true)
-    }
-
-    @objc func tapView2() {
-        let alert = UIAlertController(title: "View２をタップしました", message: nil, preferredStyle: .alert)
+    @objc func tappedButton() {
+        let alert = UIAlertController(title: "タップしました", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "閉じる", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
