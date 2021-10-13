@@ -9,7 +9,7 @@ import UIKit
 
 extension UIViewController {
     static func make(with api: API) -> UIViewController {
-        let sb = UIStoryboard(name: "Sample", bundle: nil)
+        let sb = UIStoryboard(name: "ApiBaseSamples", bundle: nil)
         let vc = sb.instantiateViewController(identifier: api.rawValue)
         vc.title = api.rawValue
         return vc
@@ -18,7 +18,7 @@ extension UIViewController {
 
 extension UITableViewController {
     static func makeTableVC(with api: API) -> UITableViewController {
-        let sb = UIStoryboard(name: "Sample", bundle: nil)
+        let sb = UIStoryboard(name: "ApiBaseSamples", bundle: nil)
         let vc = sb.instantiateViewController(identifier: api.rawValue) as! UITableViewController
         vc.title = api.rawValue
         return vc
