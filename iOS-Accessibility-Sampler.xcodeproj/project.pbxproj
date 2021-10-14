@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D041D3625E28C3D0050BF7C /* AccessibilityRespondsToUserInteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D041D3525E28C3D0050BF7C /* AccessibilityRespondsToUserInteractionViewController.swift */; };
 		1D098BEE25579549007D2F7F /* ApiBaseSamples.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D098BED25579549007D2F7F /* ApiBaseSamples.storyboard */; };
+		1D4BFC702717F0B70021FC5E /* CommonProblemSamples.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4BFC6F2717F0B70021FC5E /* CommonProblemSamples.storyboard */; };
 		1D72CB76254EDB8B0049F128 /* Documentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72CB75254EDB8B0049F128 /* Documentation.swift */; };
 		1D7426AC25EA394500C0334F /* AccessibilityViewIsModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7426AB25EA394500C0334F /* AccessibilityViewIsModalViewController.swift */; };
 		1D89968F25C30340009E22C0 /* UIAccessibilityCustomRotorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D89968E25C30340009E22C0 /* UIAccessibilityCustomRotorViewController.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		1D041D3525E28C3D0050BF7C /* AccessibilityRespondsToUserInteractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityRespondsToUserInteractionViewController.swift; sourceTree = "<group>"; };
 		1D098BED25579549007D2F7F /* ApiBaseSamples.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApiBaseSamples.storyboard; sourceTree = "<group>"; };
+		1D4BFC6F2717F0B70021FC5E /* CommonProblemSamples.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommonProblemSamples.storyboard; sourceTree = "<group>"; };
 		1D72CB75254EDB8B0049F128 /* Documentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documentation.swift; sourceTree = "<group>"; };
 		1D7426AB25EA394500C0334F /* AccessibilityViewIsModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityViewIsModalViewController.swift; sourceTree = "<group>"; };
 		1D89968E25C30340009E22C0 /* UIAccessibilityCustomRotorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAccessibilityCustomRotorViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		1D97D8722713FD2800B21917 /* CommonProblemSamples */ = {
 			isa = PBXGroup;
 			children = (
+				1D4BFC6F2717F0B70021FC5E /* CommonProblemSamples.storyboard */,
 				1D97D8732714054000B21917 /* AccessibilityTraitsButtonViewController.swift */,
 			);
 			path = CommonProblemSamples;
@@ -229,6 +232,7 @@
 				1DA963F6253C641800A4B788 /* Assets.xcassets in Resources */,
 				1D098BEE25579549007D2F7F /* ApiBaseSamples.storyboard in Resources */,
 				1DA963F4253C641600A4B788 /* Main.storyboard in Resources */,
+				1D4BFC702717F0B70021FC5E /* CommonProblemSamples.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
