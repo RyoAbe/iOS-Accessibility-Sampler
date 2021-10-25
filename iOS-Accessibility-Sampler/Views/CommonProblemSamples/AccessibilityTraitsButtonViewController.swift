@@ -42,3 +42,15 @@ private extension UIView {
         layer.cornerRadius = 10
     }
 }
+
+class AccessibilityTraitsNotEnabledViewController: UIViewController {
+    @IBOutlet private weak var tappableView1: UIView!
+    @IBOutlet private weak var tappableView2: UIView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tappableView1.toRound()
+        tappableView2.toRound()
+        tappableView2.accessibilityTraits = [.button, .notEnabled]
+    }
+}

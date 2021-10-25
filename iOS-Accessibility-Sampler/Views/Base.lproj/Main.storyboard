@@ -189,6 +189,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="4GI-fr-4nm" kind="show" id="LxY-yY-qI3"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="vPg-SM-Jo3" style="IBUITableViewCellStyleDefault" id="h7c-2X-xtW" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
                                         <rect key="frame" x="20" y="136.5" width="374" height="43.5"/>
@@ -536,6 +539,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTh-Fa-0o1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2779" y="60"/>
+        </scene>
+        <!--AccessibilityTraitsNotEnabledViewController-->
+        <scene sceneID="oCB-If-iF9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CommonProblemSamples" referencedIdentifier="AccessibilityTraitsNotEnabledViewController" id="4GI-fr-4nm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8GI-Nu-kC3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uBe-YH-F33" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2849" y="130"/>
         </scene>
     </scenes>
     <resources>

@@ -24,26 +24,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="kMA-Wb-MQ4">
-                                <rect key="frame" x="57" y="114.5" width="300" height="508"/>
+                                <rect key="frame" x="57" y="114.5" width="300" height="526"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zaZ-YG-kvb">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="74.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="80.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWt-t8-pN3">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="TgO-xt-SDf"/>
+                                                    <constraint firstAttribute="height" constant="50" id="TgO-xt-SDf"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="UIButton（通常の挙動）">
+                                                <buttonConfiguration key="configuration" style="filled" title="UIButton">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="tapButton:" destination="4bf-sR-OTD" eventType="touchUpInside" id="5FM-cF-YEV"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="フォーカスを当てると、タイトルと「ボタン」と読み上げられる。これが通常の挙動。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyJ-3F-Yzp">
-                                                <rect key="frame" x="0.0" y="48" width="300" height="26.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="フォーカスを当てると、ボタンのタイトルの後に「ボタン」と読み上げられる。これが通常の挙動。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyJ-3F-Yzp">
+                                                <rect key="frame" x="0.0" y="54" width="300" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -51,13 +51,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dEV-xO-uqn">
-                                        <rect key="frame" x="0.0" y="96.5" width="300" height="183.5"/>
+                                        <rect key="frame" x="0.0" y="102.5" width="300" height="189.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFi-B2-13o">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙅‍♂️タップ自前実装（ダメな例）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aE-Y0-K0Z">
-                                                        <rect key="frame" x="12" y="13.5" width="276" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ボタン風View（ダメな例）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aE-Y0-K0Z">
+                                                        <rect key="frame" x="12" y="16.5" width="276" height="17"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -71,16 +71,16 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Biz-tW-5zb">
-                                                <rect key="frame" x="0.0" y="48" width="300" height="92"/>
-                                                <string key="text">View に UITapGestureRecognizer を追加してタップジェスチャーを実装している。だが上の UIButton を読み上げたときと比べて以下の点がおかしい🙅‍♂️
-ダメな点1: タイトルの後に「ボタン」と読み上げられないためタップ可能な要素か伝わらない
+                                                <rect key="frame" x="0.0" y="54" width="300" height="92"/>
+                                                <string key="text">View に UITapGestureRecognizer を追加してタップジェスチャーを実装している。だが上の UIButton を読み上げたときと比べて以下の点がダメ🙅‍♂️
+ダメな点1: タイトルしか読み上げられないので、タップ可能な要素か伝わらない
 ダメな点2: フォーカスエリアがView全体ではなく、ラベルにあたっている</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップを自前実装せずにUIButtonを使えばこのような問題は発生しないが、どうしても必要な場合は以下の改善版のようにすればよい。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrp-Gc-BTj">
-                                                <rect key="frame" x="0.0" y="144" width="300" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="150" width="300" height="39.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -88,20 +88,20 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Nrt-47-IE0">
-                                        <rect key="frame" x="0.0" y="302" width="300" height="206"/>
+                                        <rect key="frame" x="0.0" y="314" width="300" height="212"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oyq-OX-jo4">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙆‍♂️タップ自前実装（改善版）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zo0-6c-0DB">
-                                                        <rect key="frame" x="12" y="13.5" width="276" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ボタン風View（改善版）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zo0-6c-0DB">
+                                                        <rect key="frame" x="12" y="16.5" width="276" height="17"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="tintColor"/>
-                                                <accessibility key="accessibilityConfiguration" label="🙆‍♂️View２（View１の修正版）">
+                                                <accessibility key="accessibilityConfiguration" label="ボタン風View（改善版）">
                                                     <accessibilityTraits key="traits" button="YES"/>
                                                     <bool key="isElement" value="YES"/>
                                                 </accessibility>
@@ -112,15 +112,15 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tz-2m-GcF">
-                                                <rect key="frame" x="0.0" y="48" width="300" height="158"/>
-                                                <string key="text">上の View と同様、View に UITapGestureRecognizer を追加してタップジェスチャーを実装しているが、以下の改善を入れている。
+                                                <rect key="frame" x="0.0" y="54" width="300" height="158"/>
+                                                <mutableString key="text">上の View と見た目は同じで、View に UITapGestureRecognizer を追加してタップジェスチャーを実装している点も同じだが、以下の改善を入れている。
 
 修正1: View の isAccessibilityElement に true をセット
 → Viewにフォーカスがあたるようになる
 修正2: View の accessibilityLabel にラベルのタイトルをセット
 → フォーカスがあたったときにラベル名が読み上げられるようになる
 修正3: View の accessibilityTraits に .button を追加
-→ 「ボタン」であることが読み上げられるようになる</string>
+→ 「ボタン」であることが読み上げられるようになる</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -155,10 +155,162 @@
             </objects>
             <point key="canvasLocation" x="2844.9275362318845" y="318.75"/>
         </scene>
+        <!--Q. タップ不可のボタンにも関わらず、その旨が読み上げられていない-->
+        <scene sceneID="AFa-gU-w5I">
+            <objects>
+                <viewController storyboardIdentifier="AccessibilityTraitsNotEnabledViewController" id="tJq-Sm-0TA" customClass="AccessibilityTraitsNotEnabledViewController" customModule="iOS_Accessibility_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hz7-nT-Q7f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定 &gt; アクセシビリティ &gt; VoiceOver にてVoiceOverを有効にしたら、下の要素にフォーカスを当ててください。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHp-QY-XOT">
+                                <rect key="frame" x="57" y="60" width="300" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="beh-lh-oTb">
+                                <rect key="frame" x="57" y="114.5" width="300" height="552.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="aUF-FN-Ss0">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="107"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhQ-Pk-UDe">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="X8y-8I-pRb"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="UIButton">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapButton:" destination="tJq-Sm-0TA" eventType="touchUpInside" id="dBF-2U-cPA"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="フォーカスを当てると、ボタンのタイトルの後に「ボタン」、その次に「無効」と読み上げられる。これが Disable なボタンにフォーカスを当てたときの通常の挙動。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdK-ID-r7B">
+                                                <rect key="frame" x="0.0" y="54" width="300" height="53"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="H6D-VP-xvv">
+                                        <rect key="frame" x="0.0" y="129" width="300" height="176.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgz-MR-jP6">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ボタン風View（ダメな例）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDF-sf-5QG">
+                                                        <rect key="frame" x="12" y="16.5" width="276" height="17"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="TDF-sf-5QG" firstAttribute="centerY" secondItem="mgz-MR-jP6" secondAttribute="centerY" id="2GX-hf-dIP"/>
+                                                    <constraint firstItem="TDF-sf-5QG" firstAttribute="leading" secondItem="mgz-MR-jP6" secondAttribute="leadingMargin" constant="4" id="Bnc-CS-e10"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="TDF-sf-5QG" secondAttribute="trailing" constant="4" id="swy-fY-JU7"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lE-Sw-3Ok">
+                                                <rect key="frame" x="0.0" y="54" width="300" height="79"/>
+                                                <string key="text">自前でDisableっぽい見た目にしているが、上の UIButton を読み上げたときと比べて以下の点がダメ🙅‍♂️
+ダメな点1: タイトルしか読み上げられないので、タップ不可な要素か伝わらない
+ダメな点2: フォーカスエリアがView全体ではなく、ラベルにあたっている</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップを自前実装せずにUIButtonを使えばこのような問題は発生しないが、どうしても必要な場合は以下の改善版のようにすればよい。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eij-n6-S0a">
+                                                <rect key="frame" x="0.0" y="137" width="300" height="39.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="B97-77-t3f">
+                                        <rect key="frame" x="0.0" y="327.5" width="300" height="225"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUA-Rr-ybT">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ボタン風View（改善版）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bn1-el-9k8">
+                                                        <rect key="frame" x="12" y="16.5" width="276" height="17"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                                <accessibility key="accessibilityConfiguration" label="ボタン風View（改善版）">
+                                                    <accessibilityTraits key="traits" button="YES"/>
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="bn1-el-9k8" secondAttribute="trailing" constant="4" id="3Qe-Qp-AIm"/>
+                                                    <constraint firstItem="bn1-el-9k8" firstAttribute="centerY" secondItem="AUA-Rr-ybT" secondAttribute="centerY" id="m32-Lo-u7u"/>
+                                                    <constraint firstItem="bn1-el-9k8" firstAttribute="leading" secondItem="AUA-Rr-ybT" secondAttribute="leadingMargin" constant="4" id="o44-Iv-aeb"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24u-dB-rD7">
+                                                <rect key="frame" x="0.0" y="54" width="300" height="171"/>
+                                                <mutableString key="text">上の View と同様 Disable風の見た目にしているのは同じだが、以下の改善を入れている。
+
+修正1: View の isAccessibilityElement に true をセット
+→ View にフォーカスがあたるようになる
+修正2: View の accessibilityLabel にラベルのタイトルをセット
+→ フォーカスがあたったときにラベル名が読み上げられるようになる
+修正3: View の accessibilityTraits に .button と .notEnabled を追加
+→ 「ボタン」、「無効」であることが読み上げられるようになる</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="EqG-bd-a5V"/>
+                                    <constraint firstItem="mgz-MR-jP6" firstAttribute="height" secondItem="JhQ-Pk-UDe" secondAttribute="height" id="Vtj-Ev-IMx"/>
+                                    <constraint firstItem="AUA-Rr-ybT" firstAttribute="height" secondItem="JhQ-Pk-UDe" secondAttribute="height" id="mCw-Fa-7vd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ozg-tO-Fjn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pHp-QY-XOT" firstAttribute="top" secondItem="ozg-tO-Fjn" secondAttribute="top" constant="16" id="OcI-EV-XT7"/>
+                            <constraint firstItem="beh-lh-oTb" firstAttribute="leading" secondItem="pHp-QY-XOT" secondAttribute="leading" id="jSD-us-1o2"/>
+                            <constraint firstItem="beh-lh-oTb" firstAttribute="top" secondItem="pHp-QY-XOT" secondAttribute="bottom" constant="28" id="l0c-G4-RTC"/>
+                            <constraint firstItem="beh-lh-oTb" firstAttribute="trailing" secondItem="pHp-QY-XOT" secondAttribute="trailing" id="mzR-Kl-ZcL"/>
+                            <constraint firstItem="beh-lh-oTb" firstAttribute="centerX" secondItem="Hz7-nT-Q7f" secondAttribute="centerX" id="yy1-cf-XkX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Q. タップ不可のボタンにも関わらず、その旨が読み上げられていない" id="VKF-Lz-llD"/>
+                    <connections>
+                        <outlet property="tappableView1" destination="mgz-MR-jP6" id="8y7-Pd-MZZ"/>
+                        <outlet property="tappableView2" destination="AUA-Rr-ybT" id="a0Y-9m-uUX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qnz-JR-9lQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3674" y="319"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
