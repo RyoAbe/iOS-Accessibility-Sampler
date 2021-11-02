@@ -54,3 +54,22 @@ class AccessibilityTraitsNotEnabledViewController: UIViewController {
         tappableView2.accessibilityTraits = [.button, .notEnabled]
     }
 }
+
+class ImageButtonViewController: UIViewController {
+    @IBOutlet private weak var stackView2: UIStackView!
+    @IBOutlet private weak var stackView3: UIStackView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        var config = UIButton.Configuration.filled()
+        config.cornerStyle = .capsule
+        let button2 = UIButton(configuration: config, primaryAction: nil)
+        button2.setImage(UIImage(named: "star"), for: .normal)
+        stackView2.insertArrangedSubview(button2, at: 0)
+
+        let button3 = UIButton(configuration: config, primaryAction: nil)
+        button3.setImage(UIImage(named: "star"), for: .normal)
+        button3.accessibilityLabel = "お気に入り"
+        stackView3.insertArrangedSubview(button3, at: 0)
+    }
+}
