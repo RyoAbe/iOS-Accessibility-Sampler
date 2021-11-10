@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1zi-Jr-fZj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides dynamicTypePreference="1"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,6 +9,400 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--よくある問題ごとのサンプルコード-->
+        <scene sceneID="2e6-Hf-Uh6">
+            <objects>
+                <tableViewController id="1zi-Jr-fZj" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="PbU-Al-xLM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="ボタン" id="8eW-n8-2U1">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="aWu-yZ-XSt" style="IBUITableViewCellStyleDefault" id="TIM-ia-QEQ" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="55.5" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TIM-ia-QEQ" id="dcy-V9-cyv">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="タップ可能な要素なのに、「ボタン」とも「リンク」とも読み上げられない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aWu-yZ-XSt">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="4bf-sR-OTD" kind="show" id="Z5I-2r-60d"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="eD4-lE-MEO" style="IBUITableViewCellStyleDefault" id="z6u-Vd-8Si" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="99.5" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z6u-Vd-8Si" id="TTD-l6-ewR">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="タップ不可な要素なのに、その旨が読み上げられていない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eD4-lE-MEO">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="tJq-Sm-0TA" kind="show" id="cwQ-8T-4qY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="SRX-Wv-TNx" style="IBUITableViewCellStyleDefault" id="AHv-SW-Wy7" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="143.5" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AHv-SW-Wy7" id="LoC-Lg-xHP">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="アイコンボタンにフォーカスを当てるとファイル名が読み上げられてしまう" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SRX-Wv-TNx">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="6dd-FA-NTd" kind="show" id="q3O-H3-KNw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="ラベル" id="dA8-TG-cl2">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Vsn-w9-aRn" style="IBUITableViewCellStyleDefault" id="xMH-ro-tph" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="243.5" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xMH-ro-tph" id="Pl6-zA-udm">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="ラベルが意図しない読み上げられ方をする（金額や日付）" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vsn-w9-aRn">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9yr-AM-qxC" kind="show" id="ddB-Ng-aM5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="IAv-tP-qWJ" style="IBUITableViewCellStyleDefault" id="VsI-DY-pRj" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="287.5" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VsI-DY-pRj" id="hs7-xb-gaw">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="トーストやHUD（Head-up Display）系ライブラリで、表示メッセージが読み上げられない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IAv-tP-qWJ">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="GFo-lJ-IvS" style="IBUITableViewCellStyleDefault" id="gLB-0E-vAa" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="331.5" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gLB-0E-vAa" id="92Q-B0-UfX">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="設定からテキストサイズを変更してもアプリに反映されない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GFo-lJ-IvS">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="テキストフィールド" id="DUF-3y-tS1">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="AgR-dM-uXg" style="IBUITableViewCellStyleDefault" id="5cG-FS-zIw" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="431.5" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5cG-FS-zIw" id="6HY-0O-da0">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="テキストフィールドに何を入力すべきか、対となるフィールド名が分からない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AgR-dM-uXg">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="テーブルビュー" id="C3S-lQ-PSl">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6zd-Oe-cUe" style="IBUITableViewCellStyleDefault" id="fbh-rF-3Sh" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="531.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fbh-rF-3Sh" id="KCk-sT-uSf">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="タイトルと値が対となるようなラベルを持つセルなのに、それぞれがバラバラに読み上げられてしまう" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6zd-Oe-cUe">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="qn3-bC-Ra7" style="IBUITableViewCellStyleDefault" id="WI6-9t-L4f" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="575" width="374" height="52.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WI6-9t-L4f" id="Ge7-gA-8R9">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="52.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="たくさんのコンテンツを持つUICollectionView や UITableView の Cell を読み上げると、ずらずらセル全体を読み上げられてしまい、頭に入ってこない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qn3-bC-Ra7">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="52.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="コレクションビュー" id="OHP-R9-1j5">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="rhM-PG-huz" style="IBUITableViewCellStyleDefault" id="RSG-qT-2qo" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="683.5" width="374" height="52.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RSG-qT-2qo" id="AVn-hi-yaf">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="52.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="たくさんのセルを持つ横スクロールの UICollectionView で、左右スワイプでセルを移動するも、UICollectionView 以下の要素に到達するまでたくさんスワイプをしなければならない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rhM-PG-huz">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="52.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="状態" id="8iS-KS-a5e">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="oqK-Ek-wzN" style="IBUITableViewCellStyleDefault" id="mJJ-99-XE4" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="792" width="374" height="52.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mJJ-99-XE4" id="hay-Nx-KkM">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="52.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oqK-Ek-wzN">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="52.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <string key="text">選択可能な要素（ラジオボタンやタブなど）にフォーカスを当てたときに、現在の選択中の要素が分からない
+</string>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="mTb-6n-pnL" style="IBUITableViewCellStyleDefault" id="M1z-9k-7L0" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="844.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M1z-9k-7L0" id="SW9-wO-aas">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="見出し相当のラベル（UITableViewのヘッダータイトルなど）なのに「見出し」と読み上げられない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mTb-6n-pnL">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="フォーカス" id="7e6-m6-qlU">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fva-S8-t6h" style="IBUITableViewCellStyleDefault" id="alu-eI-yko" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="944" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="alu-eI-yko" id="gIk-PK-M1N">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="左右フォーカス移動で一部のViewにフォーカスが当たらない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fva-S8-t6h">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="LiY-bQ-i2n" style="IBUITableViewCellStyleDefault" id="xzt-Fj-eEz" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="987.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xzt-Fj-eEz" id="ZoY-pz-AdS">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="左右フォーカス移動でフォーカスがあたる順序がおかしい" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LiY-bQ-i2n">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Mnx-sM-6gX" style="IBUITableViewCellStyleDefault" id="Bxo-ua-2Cx" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="1031" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bxo-ua-2Cx" id="Phr-HE-Dwz">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="左右フォーカス移動で読み上げ不要なViewにフォーカスが当たる" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mnx-sM-6gX">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Btq-aC-HCW" style="IBUITableViewCellStyleDefault" id="kef-JC-cin" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="1074.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kef-JC-cin" id="Zch-O6-YG4">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="モーダル表示でモーダルの背面の要素にフォーカスが当てられてしまう" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Btq-aC-HCW">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="sdG-b3-2Iq" style="IBUITableViewCellStyleDefault" id="qcS-ce-l68" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="1118" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qcS-ce-l68" id="Zzb-I0-684">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="セルをタップして遷移した後、元の画面に戻ってきた際に、元のセルにフォーカスが戻らない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sdG-b3-2Iq">
+                                                    <rect key="frame" x="20" y="0.0" width="315" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="グラフ" id="A0r-cN-J9P">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="PJK-fa-JJk" style="IBUITableViewCellStyleDefault" id="crH-vf-5on" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="1217.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="crH-vf-5on" id="SN9-Wd-OVL">
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="グラフの読み上げさせ方が分からない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PJK-fa-JJk">
+                                                    <rect key="frame" x="8" y="0.0" width="339" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="全般" id="TjA-0N-zTf">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="BVT-Nb-WVa" style="IBUITableViewCellStyleDefault" id="eeF-rL-VKn" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="1317" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eeF-rL-VKn" id="cnM-dk-yjw">
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="ホーム画面でアプリにフォーカスを当てるも意図しない読み上げられ方をしてしまう" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BVT-Nb-WVa">
+                                                    <rect key="frame" x="8" y="0.0" width="339" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="1zi-Jr-fZj" id="CKE-3V-XmT"/>
+                            <outlet property="delegate" destination="1zi-Jr-fZj" id="v2z-es-YSB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="よくある問題ごとのサンプルコード" id="huV-Um-n0F"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Atg-h9-cLY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1933" y="1519"/>
+        </scene>
         <!--タップ可能な要素なのに、「ボタン」とも「リンク」とも読み上げられない-->
         <scene sceneID="WGm-f7-AYM">
             <objects>
@@ -17,16 +412,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定 &gt; アクセシビリティ &gt; VoiceOver にてVoiceOverを有効にしたら、下の要素にフォーカスを当ててください。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qM-L0-ygv">
-                                <rect key="frame" x="57" y="16" width="300" height="26.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <rect key="frame" x="57" y="16" width="300" height="52"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="kMA-Wb-MQ4">
-                                <rect key="frame" x="57" y="70.5" width="300" height="526"/>
+                                <rect key="frame" x="57" y="96" width="300" height="636"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zaZ-YG-kvb">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="80.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="100.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWt-t8-pN3">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
@@ -35,29 +430,29 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="ボタンA">
-                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="tapButton:" destination="4bf-sR-OTD" eventType="touchUpInside" id="5FM-cF-YEV"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="フォーカスを当てると、ボタンのタイトルの後に「ボタン」と読み上げられる。これが通常の UIButton 挙動。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyJ-3F-Yzp">
-                                                <rect key="frame" x="0.0" y="54" width="300" height="26.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <rect key="frame" x="0.0" y="54" width="300" height="46.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dEV-xO-uqn">
-                                        <rect key="frame" x="0.0" y="102.5" width="300" height="189.5"/>
+                                        <rect key="frame" x="0.0" y="122.5" width="300" height="215"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFi-B2-13o">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ボタン風View（ダメな例）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aE-Y0-K0Z">
-                                                        <rect key="frame" x="12" y="16.5" width="276" height="17"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <rect key="frame" x="12" y="13" width="276" height="24"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -70,31 +465,31 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Biz-tW-5zb">
-                                                <rect key="frame" x="0.0" y="54" width="300" height="92"/>
+                                                <rect key="frame" x="0.0" y="54" width="300" height="110.5"/>
                                                 <string key="text">View に UITapGestureRecognizer を追加してタップジェスチャーを実装している。だが上の UIButton を読み上げたときと比べて以下の点がダメ🙅‍♂️
 ダメな点1: タイトルしか読み上げられないので、タップ可能な要素か伝わらない
 ダメな点2: フォーカスエリアがView全体ではなく、ラベルにあたっている</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップを自前実装せずにUIButtonを使えばこのような問題は発生しないが、どうしても必要な場合は以下の改善版のようにすればよい。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrp-Gc-BTj">
-                                                <rect key="frame" x="0.0" y="150" width="300" height="39.5"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                                <rect key="frame" x="0.0" y="168.5" width="300" height="46.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Nrt-47-IE0">
-                                        <rect key="frame" x="0.0" y="314" width="300" height="212"/>
+                                        <rect key="frame" x="0.0" y="359.5" width="300" height="276.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oyq-OX-jo4">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ボタン風View（改善版）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zo0-6c-0DB">
-                                                        <rect key="frame" x="12" y="16.5" width="276" height="17"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <rect key="frame" x="12" y="13" width="276" height="24"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -111,7 +506,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tz-2m-GcF">
-                                                <rect key="frame" x="0.0" y="54" width="300" height="158"/>
+                                                <rect key="frame" x="0.0" y="54" width="300" height="222.5"/>
                                                 <string key="text">上の View と見た目は同じで、View に UITapGestureRecognizer を追加してタップジェスチャーを実装している点も同じだが、以下の改善を入れている。
 
 修正1: View の isAccessibilityElement に true をセット
@@ -120,7 +515,7 @@
 → フォーカスがあたったときにラベル名が読み上げられるようになる
 修正3: View の accessibilityTraits に `.button` を追加
 → 「ボタン」であることが読み上げられるようになる</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -163,16 +558,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定 &gt; アクセシビリティ &gt; VoiceOver にてVoiceOverを有効にしたら、下の要素にフォーカスを当ててください。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHp-QY-XOT">
-                                <rect key="frame" x="57" y="16" width="300" height="26.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <rect key="frame" x="57" y="16" width="300" height="52"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="beh-lh-oTb">
-                                <rect key="frame" x="57" y="70.5" width="300" height="552.5"/>
+                                <rect key="frame" x="57" y="96" width="300" height="652"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="aUF-FN-Ss0">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="107"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="116.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhQ-Pk-UDe">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
@@ -181,29 +576,29 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="ボタンA">
-                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="tapButton:" destination="tJq-Sm-0TA" eventType="touchUpInside" id="dBF-2U-cPA"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="フォーカスを当てると、ボタンのタイトルの後に「ボタン」、その次に「無効」と読み上げられる。これが Disable なボタンにフォーカスを当てたときの通常の  UIButton の挙動。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdK-ID-r7B">
-                                                <rect key="frame" x="0.0" y="54" width="300" height="53"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <rect key="frame" x="0.0" y="54" width="300" height="62.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="H6D-VP-xvv">
-                                        <rect key="frame" x="0.0" y="129" width="300" height="176.5"/>
+                                        <rect key="frame" x="0.0" y="138.5" width="300" height="215"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgz-MR-jP6">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ボタン風View（ダメな例）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDF-sf-5QG">
-                                                        <rect key="frame" x="12" y="16.5" width="276" height="17"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <rect key="frame" x="12" y="13" width="276" height="24"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                         <color key="textColor" systemColor="tertiaryLabelColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -216,31 +611,31 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lE-Sw-3Ok">
-                                                <rect key="frame" x="0.0" y="54" width="300" height="79"/>
+                                                <rect key="frame" x="0.0" y="54" width="300" height="110.5"/>
                                                 <string key="text">自前でDisableっぽい見た目にしているが、上の UIButton を読み上げたときと比べて以下の点がダメ🙅‍♂️
 ダメな点1: タイトルしか読み上げられないので、タップ不可な要素か伝わらない
 ダメな点2: フォーカスエリアがView全体ではなく、ラベルにあたっている</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disableっぽい見た目を自前実装せずにUIButtonを使えばこのような問題は発生しないが、どうしても必要な場合は以下の改善版のようにすればよい。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eij-n6-S0a">
-                                                <rect key="frame" x="0.0" y="137" width="300" height="39.5"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                                <rect key="frame" x="0.0" y="168.5" width="300" height="46.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="B97-77-t3f">
-                                        <rect key="frame" x="0.0" y="327.5" width="300" height="225"/>
+                                        <rect key="frame" x="0.0" y="375.5" width="300" height="276.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUA-Rr-ybT">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ボタン風View（改善版）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bn1-el-9k8">
-                                                        <rect key="frame" x="12" y="16.5" width="276" height="17"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <rect key="frame" x="12" y="13" width="276" height="24"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                         <color key="textColor" systemColor="tertiaryLabelColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -257,7 +652,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24u-dB-rD7">
-                                                <rect key="frame" x="0.0" y="54" width="300" height="171"/>
+                                                <rect key="frame" x="0.0" y="54" width="300" height="222.5"/>
                                                 <string key="text">上の View と同様 Disable風の見た目にしているのは同じだが、以下の改善を入れている。
 
 修正1: View の isAccessibilityElement に true をセット
@@ -266,7 +661,7 @@
 → フォーカスがあたったときにラベル名が読み上げられるようになる
 修正3: View の accessibilityTraits に `.button` と `.notEnabled` を追加
 → 「ボタン」、「無効」であることが読み上げられるようになる</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -300,400 +695,6 @@
             </objects>
             <point key="canvasLocation" x="3209" y="875"/>
         </scene>
-        <!--よくある問題ごとのサンプルコード-->
-        <scene sceneID="2e6-Hf-Uh6">
-            <objects>
-                <tableViewController id="1zi-Jr-fZj" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="PbU-Al-xLM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle="ボタン" id="8eW-n8-2U1">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="aWu-yZ-XSt" style="IBUITableViewCellStyleDefault" id="TIM-ia-QEQ" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="49.5" width="374" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TIM-ia-QEQ" id="dcy-V9-cyv">
-                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="タップ可能な要素なのに、「ボタン」とも「リンク」とも読み上げられない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aWu-yZ-XSt">
-                                                    <rect key="frame" x="20" y="0.0" width="316.5" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="4bf-sR-OTD" kind="show" id="Z5I-2r-60d"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="eD4-lE-MEO" style="IBUITableViewCellStyleDefault" id="z6u-Vd-8Si" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="93.5" width="374" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z6u-Vd-8Si" id="TTD-l6-ewR">
-                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="タップ不可な要素なのに、その旨が読み上げられていない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eD4-lE-MEO">
-                                                    <rect key="frame" x="20" y="0.0" width="316.5" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="tJq-Sm-0TA" kind="show" id="cwQ-8T-4qY"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="SRX-Wv-TNx" style="IBUITableViewCellStyleDefault" id="AHv-SW-Wy7" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="137.5" width="374" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AHv-SW-Wy7" id="LoC-Lg-xHP">
-                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="アイコンボタンにフォーカスを当てるとファイル名が読み上げられてしまう" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SRX-Wv-TNx">
-                                                    <rect key="frame" x="20" y="0.0" width="316.5" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="6dd-FA-NTd" kind="show" id="q3O-H3-KNw"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="ラベル" id="dA8-TG-cl2">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Vsn-w9-aRn" style="IBUITableViewCellStyleDefault" id="xMH-ro-tph" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="231.5" width="374" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xMH-ro-tph" id="Pl6-zA-udm">
-                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="ラベルが意図しない読み上げられ方をする（金額や日付）" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vsn-w9-aRn">
-                                                    <rect key="frame" x="20" y="0.0" width="316.5" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="9yr-AM-qxC" kind="show" id="ddB-Ng-aM5"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="IAv-tP-qWJ" style="IBUITableViewCellStyleDefault" id="VsI-DY-pRj" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="275.5" width="374" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VsI-DY-pRj" id="hs7-xb-gaw">
-                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="トーストやHUD（Head-up Display）系ライブラリで、表示メッセージが読み上げられない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IAv-tP-qWJ">
-                                                    <rect key="frame" x="20" y="0.0" width="316.5" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="GFo-lJ-IvS" style="IBUITableViewCellStyleDefault" id="gLB-0E-vAa" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="319.5" width="374" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gLB-0E-vAa" id="92Q-B0-UfX">
-                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="設定からテキストサイズを変更してもアプリに反映されない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GFo-lJ-IvS">
-                                                    <rect key="frame" x="20" y="0.0" width="316.5" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="テキストフィールド" id="DUF-3y-tS1">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="AgR-dM-uXg" style="IBUITableViewCellStyleDefault" id="5cG-FS-zIw" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="413.5" width="374" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5cG-FS-zIw" id="6HY-0O-da0">
-                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="テキストフィールドに何を入力すべきか、対となるフィールド名が分からない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AgR-dM-uXg">
-                                                    <rect key="frame" x="20" y="0.0" width="316.5" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="テーブルビュー" id="C3S-lQ-PSl">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6zd-Oe-cUe" style="IBUITableViewCellStyleDefault" id="fbh-rF-3Sh" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="507.5" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fbh-rF-3Sh" id="KCk-sT-uSf">
-                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="タイトルと値が対となるようなラベルを持つセルなのに、それぞれがバラバラに読み上げられてしまう" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6zd-Oe-cUe">
-                                                    <rect key="frame" x="20" y="0.0" width="316.5" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="qn3-bC-Ra7" style="IBUITableViewCellStyleDefault" id="WI6-9t-L4f" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="551" width="374" height="57.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WI6-9t-L4f" id="Ge7-gA-8R9">
-                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="57.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="たくさんのコンテンツを持つUICollectionView や UITableView の Cell を読み上げると、ずらずらセル全体を読み上げられてしまい、頭に入ってこない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qn3-bC-Ra7">
-                                                    <rect key="frame" x="20" y="0.0" width="316.5" height="57.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="コレクションビュー" id="OHP-R9-1j5">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="rhM-PG-huz" style="IBUITableViewCellStyleDefault" id="RSG-qT-2qo" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="658.5" width="374" height="72.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RSG-qT-2qo" id="AVn-hi-yaf">
-                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="72.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="たくさんのセルを持つ横スクロールの UICollectionView で、左右スワイプでセルを移動するも、UICollectionView 以下の要素に到達するまでたくさんスワイプをしなければならない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rhM-PG-huz">
-                                                    <rect key="frame" x="20" y="0.0" width="316.5" height="72.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="状態" id="8iS-KS-a5e">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="oqK-Ek-wzN" style="IBUITableViewCellStyleDefault" id="mJJ-99-XE4" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="781" width="374" height="57.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mJJ-99-XE4" id="hay-Nx-KkM">
-                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="57.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oqK-Ek-wzN">
-                                                    <rect key="frame" x="20" y="0.0" width="316.5" height="57.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <string key="text">選択可能な要素（ラジオボタンやタブなど）にフォーカスを当てたときに、現在の選択中の要素が分からない
-</string>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="mTb-6n-pnL" style="IBUITableViewCellStyleDefault" id="M1z-9k-7L0" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="838.5" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M1z-9k-7L0" id="SW9-wO-aas">
-                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="見出し相当のラベル（UITableViewのヘッダータイトルなど）なのに「見出し」と読み上げられない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mTb-6n-pnL">
-                                                    <rect key="frame" x="20" y="0.0" width="316.5" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="フォーカス" id="7e6-m6-qlU">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fva-S8-t6h" style="IBUITableViewCellStyleDefault" id="alu-eI-yko" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="932" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="alu-eI-yko" id="gIk-PK-M1N">
-                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="左右フォーカス移動で一部のViewにフォーカスが当たらない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fva-S8-t6h">
-                                                    <rect key="frame" x="20" y="0.0" width="316.5" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="LiY-bQ-i2n" style="IBUITableViewCellStyleDefault" id="xzt-Fj-eEz" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="975.5" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xzt-Fj-eEz" id="ZoY-pz-AdS">
-                                            <rect key="frame" x="0.0" y="0.0" width="356.5" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="左右フォーカス移動でフォーカスがあたる順序がおかしい" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LiY-bQ-i2n">
-                                                    <rect key="frame" x="8" y="0.0" width="340.5" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Mnx-sM-6gX" style="IBUITableViewCellStyleDefault" id="Bxo-ua-2Cx" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="1019" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bxo-ua-2Cx" id="Phr-HE-Dwz">
-                                            <rect key="frame" x="0.0" y="0.0" width="356.5" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="左右フォーカス移動で読み上げ不要なViewにフォーカスが当たる" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mnx-sM-6gX">
-                                                    <rect key="frame" x="8" y="0.0" width="340.5" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Btq-aC-HCW" style="IBUITableViewCellStyleDefault" id="kef-JC-cin" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="1062.5" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kef-JC-cin" id="Zch-O6-YG4">
-                                            <rect key="frame" x="0.0" y="0.0" width="356.5" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="モーダル表示でモーダルの背面の要素にフォーカスが当てられてしまう" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Btq-aC-HCW">
-                                                    <rect key="frame" x="8" y="0.0" width="340.5" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="sdG-b3-2Iq" style="IBUITableViewCellStyleDefault" id="qcS-ce-l68" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="1106" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qcS-ce-l68" id="Zzb-I0-684">
-                                            <rect key="frame" x="0.0" y="0.0" width="356.5" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="セルをタップして遷移した後、元の画面に戻ってきた際に、元のセルにフォーカスが戻らない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sdG-b3-2Iq">
-                                                    <rect key="frame" x="8" y="0.0" width="340.5" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="グラフ" id="A0r-cN-J9P">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="PJK-fa-JJk" style="IBUITableViewCellStyleDefault" id="crH-vf-5on" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="1199.5" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="crH-vf-5on" id="SN9-Wd-OVL">
-                                            <rect key="frame" x="0.0" y="0.0" width="356.5" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="グラフの読み上げさせ方が分からない" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PJK-fa-JJk">
-                                                    <rect key="frame" x="8" y="0.0" width="340.5" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="全般" id="TjA-0N-zTf">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="BVT-Nb-WVa" style="IBUITableViewCellStyleDefault" id="eeF-rL-VKn" customClass="MinHeightCell" customModule="iOS_Accessibility_Sampler" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="1293" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eeF-rL-VKn" id="cnM-dk-yjw">
-                                            <rect key="frame" x="0.0" y="0.0" width="356.5" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="ホーム画面でアプリにフォーカスを当てるも意図しない読み上げられ方をしてしまう" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BVT-Nb-WVa">
-                                                    <rect key="frame" x="8" y="0.0" width="340.5" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="1zi-Jr-fZj" id="CKE-3V-XmT"/>
-                            <outlet property="delegate" destination="1zi-Jr-fZj" id="v2z-es-YSB"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="よくある問題ごとのサンプルコード" id="huV-Um-n0F"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Atg-h9-cLY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1933" y="1519"/>
-        </scene>
         <!--アイコンボタンにフォーカスを当てるとファイル名が読み上げられてしまう-->
         <scene sceneID="Xn7-GA-LB8">
             <objects>
@@ -703,56 +704,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定 &gt; アクセシビリティ &gt; VoiceOver にてVoiceOverを有効にしたら、下の要素にフォーカスを当ててください。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPM-Hi-SA2">
-                                <rect key="frame" x="57" y="16" width="300" height="26.5"/>
+                                <rect key="frame" x="57" y="16" width="300" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="5w2-jm-CRO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="iVw-cD-WZy">
-                                <rect key="frame" x="32" y="82.5" width="350" height="232"/>
+                                <rect key="frame" x="32" y="108" width="350" height="271.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fzb-1f-O1s">
-                                        <rect key="frame" x="0.0" y="0.0" width="349" height="91.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343.5" height="98.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVB-S9-BfC">
-                                                <rect key="frame" x="0.0" y="0.0" width="115.5" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="126" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="YSj-lA-6I5"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" image="star" title="お気に入り" cornerStyle="capsule">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleCallout"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="フォーカスを当てると、ボタンのタイトルと「ボタン」が読み上げられる。これがボタンのタイトルがセットされている UIButton を読み上げたときの通常の挙動。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYE-Hg-01F">
-                                                <rect key="frame" x="0.0" y="52" width="349" height="39.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <rect key="frame" x="0.0" y="52" width="343.5" height="46.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dIi-af-xtW">
-                                        <rect key="frame" x="0.0" y="115.5" width="349" height="53"/>
+                                        <rect key="frame" x="0.0" y="122.5" width="343.5" height="78.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2u-AZ-cRb">
-                                                <rect key="frame" x="0.0" y="0.0" width="349" height="53"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343.5" height="78.5"/>
                                                 <string key="text">[修正前] こちらのボタンのようにタイトルが無くアイコンのみのボタンもよく見るかと思います。フォーカスを当てると、「star」、「ボタン」と読み上げられ、本来は「お気に入り」と読み上げられて欲しいところが、アイコンのファイル名が読み上げられてしまっています</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ul3-Qi-cNV">
-                                        <rect key="frame" x="0.0" y="192.5" width="349" height="39.5"/>
+                                        <rect key="frame" x="0.0" y="225" width="344.5" height="46.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[修正後] そこで、UIButton の accessibilityLabel に「お気に入り」と文字列をセットすることで意図通りの読み上げられ方をするようになります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66o-SE-b2R">
-                                                <rect key="frame" x="0.0" y="0.0" width="349" height="39.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="344.5" height="46.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -791,22 +792,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定 &gt; アクセシビリティ &gt; VoiceOver にてVoiceOverを有効にしたら、下の要素にフォーカスを当ててください。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqX-Dz-B9V">
-                                <rect key="frame" x="57" y="16" width="300" height="26.5"/>
+                                <rect key="frame" x="57" y="16" width="300" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="fhN-We-bLH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="o6M-Hw-9vX">
-                                <rect key="frame" x="32" y="66.5" width="350" height="392"/>
+                                <rect key="frame" x="32" y="92" width="350" height="438"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="iAG-Er-b5e">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="158"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="176.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2Z-iO-Mft">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="20.5"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" header="YES"/>
                                                 </accessibility>
@@ -815,19 +816,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3V7-s6-tFC">
-                                                <rect key="frame" x="0.0" y="29" width="350" height="129"/>
+                                                <rect key="frame" x="0.0" y="32.5" width="350" height="144"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="fDp-fM-1pM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="60.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="68"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-9,999円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeB-EG-LVM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="118" height="33.5"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[修正前] マイナスが読み上げられていないため、聞き手に誤解を招き得る状態となっています。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wx3-HV-ktn">
-                                                                <rect key="frame" x="0.0" y="34" width="349" height="26.5"/>
+                                                                <rect key="frame" x="0.0" y="37.5" width="343.5" height="30.5"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -835,17 +836,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pRD-Uz-xO8">
-                                                        <rect key="frame" x="0.0" y="68.5" width="350" height="60.5"/>
+                                                        <rect key="frame" x="0.0" y="76" width="350" height="68"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-9,999円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vA9-mu-h0i">
-                                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="118" height="33.5"/>
                                                                 <accessibility key="accessibilityConfiguration" label="マイナス9,999円"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[修正後] 修正方法は単純で日付の UILabel の accessibilityLabel に「マイナス9,999円」とセットすればよいです。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckX-7a-nba">
-                                                                <rect key="frame" x="0.0" y="34" width="337" height="26.5"/>
+                                                                <rect key="frame" x="0.0" y="37.5" width="350" height="30.5"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -857,10 +858,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7s9-K7-n6k">
-                                        <rect key="frame" x="0.0" y="195" width="350" height="197"/>
+                                        <rect key="frame" x="0.0" y="213.5" width="350" height="224.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvb-ba-h5H">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="20.5"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" header="YES"/>
                                                 </accessibility>
@@ -869,19 +870,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4D2-RM-RdT">
-                                                <rect key="frame" x="0.0" y="29" width="350" height="168"/>
+                                                <rect key="frame" x="0.0" y="32.5" width="350" height="192"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nFx-O3-6dI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="73.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="84"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021/11/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbK-JW-24u">
-                                                                <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="135" height="33.5"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[修正前] スラッシュを素直にスラッシュと読み上げられってしまっている。もちろん画面上の他の情報から日付を指していることは分かりそうではあるが、できれば直したいところです。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ioi-yQ-idi">
-                                                                <rect key="frame" x="0.0" y="34" width="349" height="39.5"/>
+                                                                <rect key="frame" x="0.0" y="37.5" width="343.5" height="46.5"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -889,17 +890,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AZK-8A-aRx">
-                                                        <rect key="frame" x="0.0" y="81.5" width="350" height="86.5"/>
+                                                        <rect key="frame" x="0.0" y="92" width="350" height="100"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021/11/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJV-LT-YTP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="135" height="33.5"/>
                                                                 <accessibility key="accessibilityConfiguration" label="2021年11月10日"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ell-Br-MtL">
-                                                                <rect key="frame" x="0.0" y="34" width="349" height="52.5"/>
+                                                                <rect key="frame" x="0.0" y="37.5" width="343.5" height="62.5"/>
                                                                 <string key="text">[修正後] こちらも金額のときと同じ修正方法で、日付の UILabel の accessibilityLabel に「2021年11月10日」とセットすればよいです。こちらは致命的な問題ではなかったものの、こういったちょっとしたことが体験を良くすると思います。</string>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                                 <nil key="textColor"/>
