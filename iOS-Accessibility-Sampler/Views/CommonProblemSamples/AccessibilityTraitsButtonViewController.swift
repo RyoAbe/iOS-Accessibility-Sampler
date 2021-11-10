@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AccessibilityTraitsButtonViewController: UIViewController {
+final class AccessibilityTraitsButtonViewController: UIViewController {
     @IBOutlet private weak var tappableView1: UIView!
     @IBOutlet private weak var tappableView2: UIView!
 
@@ -43,7 +43,7 @@ private extension UIView {
     }
 }
 
-class AccessibilityTraitsNotEnabledViewController: UIViewController {
+final class AccessibilityTraitsNotEnabledViewController: UIViewController {
     @IBOutlet private weak var tappableView1: UIView!
     @IBOutlet private weak var tappableView2: UIView!
 
@@ -55,7 +55,7 @@ class AccessibilityTraitsNotEnabledViewController: UIViewController {
     }
 }
 
-class ImageButtonViewController: UIViewController {
+final class ImageButtonViewController: UIViewController {
     @IBOutlet private weak var stackView2: UIStackView!
     @IBOutlet private weak var stackView3: UIStackView!
 
