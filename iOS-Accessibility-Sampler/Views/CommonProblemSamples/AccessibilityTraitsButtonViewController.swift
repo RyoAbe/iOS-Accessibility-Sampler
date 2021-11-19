@@ -73,3 +73,21 @@ final class ImageButtonViewController: UIViewController {
         stackView3.insertArrangedSubview(button3, at: 0)
     }
 }
+
+final class ReadLabelViewController: UIViewController {
+    @IBOutlet private weak var numberLabel: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let f1 = NumberFormatter()
+        let identifier = Locale.preferredLanguages.first ?? Locale.current.identifier
+        f1.locale = Locale(identifier: identifier)
+        f1.numberStyle = .currencyPlural
+        let number = f1.number(from: numberLabel.text ?? "") ?? 0
+
+        f1.numberStyle = .spellOut
+        let formatted = f1.string(from: number) ?? ""
+        // TODO: 通貨が「円」固定になってしまっている。NumberFormatter の style に spellOut と currencyPlural が適用できると理想
+        numberLabel.accessibilityLabel = formatted + "円"
+    }
+}
